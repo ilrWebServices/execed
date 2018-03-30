@@ -1,0 +1,5 @@
+# Schema for the theme setting configuration file of the THEMETITLE theme.
+
+cornell.settings:
+  type: cornell_settings
+  label: 'cornell settings'

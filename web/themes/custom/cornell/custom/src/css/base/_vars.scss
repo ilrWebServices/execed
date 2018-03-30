@@ -1,0 +1,56 @@
+/* FONTS
+-------------------------------------- */
+$freight-sans: 'freight-sans-pro', sans-serif;
+$freight-text: 'freight-text-pro', serif;
+
+$font-body: $freight-sans;
+$font-headline: $freight-text;
+$font-size-base: 16px;
+
+/* WIDTHS
+-------------------------------------- */
+$max-site-width: 1440px;
+
+/* BREAKPOINTS
+-------------------------------------- */
+$break-xxl: 90rem; // 1440px
+$break-xl: 75rem;  // 1200px
+$break-lg: 60rem;  // 960px
+$break-medl: 53.75rem;  // 860px;
+$break-med: 48rem; // 768px
+$break-grid: 43.75rem; // 700px
+$break-meds: 43.125rem; // 690px
+$break-sm: 40rem; // 640px
+$break-xs: 30rem; // 480px
+$break-xsm: 25rem; // 400px
+$break-xxs: 22.5rem; // 360px
+
+
+/* COLORS
+-------------------------------------- */
+$primary--light: #ef4035;
+$primary: #b31b1b;
+
+$secondary--lighter: #ece8e2;
+$secondary--light: #d8d2c9;
+$secondary: #c0b7ad;
+
+$light--light: white;
+//$light: ;
+$light--dark: #717171;
+
+$dark--light: #545454;
+$dark: #222222;
+$dark--dark: black;
+
+/* TIMINGS
+-------------------------------------- */
+$ease: ease-in-out;
+$quick: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+
+/* EASINGS
+-------------------------------------- */
+$easing--quick: .12s ease-out;
+$easing--regular: .24s ease-out;
+$easing--slow: .36s ease-out;

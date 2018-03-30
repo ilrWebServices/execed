@@ -1,0 +1,26 @@
+// base styles
+@import 'base/normalize';  // standarize base HTML
+@import 'base/fonts';  // import local fonts
+@import 'base/vars';  // assign project variables
+@import 'base/mixins';
+@import 'base/type';
+
+// global items
+@import 'global/base';
+@import 'global/main';
+@import 'global/type';
+@import 'global/alignment';
+@import 'global/text-color';
+@import 'global/buttons';
+@import 'global/forms';
+@import 'global/responsive-areas';
+@import 'global/site-footer';
+@import 'global/site-header';
+@import 'global/chat-bubble';
+
+// components
+@import 'components/hero';
+@import 'components/basic-hero';
+
+// page templates
+// @import 'templates/_page';

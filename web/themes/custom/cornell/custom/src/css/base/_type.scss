@@ -1,0 +1,65 @@
+@mixin h1 {
+    font-family: $font-headline;
+    @include responsive-font(9.375rem, 4rem, 1440px, 320px);
+    font-weight: 500;
+    color: inherit;
+    line-height: .93;
+    margin: 0;
+    margin-bottom: 2rem;
+}
+
+@mixin h2 {
+    font-family: $font-headline;
+    @include responsive-font(7.5rem, 3rem, 1440px, 320px);
+    font-weight: 500;
+    color: inherit;
+    line-height: 1;
+    margin: 0;
+    margin-bottom: 2rem;
+}
+
+@mixin h3 {
+    font-family: $font-body;
+    @include responsive-font(7.5rem, 3rem, 1440px, 320px);
+    font-weight: 400;
+    color: inherit;
+    line-height: 1;
+    margin: 0;
+    margin-bottom: 2rem;
+}
+
+@mixin h4 {
+    font-family: $font-body;
+    @include responsive-font(5rem, 3rem, 1440px, 320px);
+    font-weight: 400;
+    color: inherit;
+    line-height: 1;
+    margin: 0;
+    margin-bottom: 2rem;
+}
+
+@mixin h5 {
+    font-family: $font-body;
+    @include responsive-font(2.25rem, 1.875rem, 1440px, 320px);
+    font-weight: 400;
+    color: inherit;
+    line-height: .95;
+    margin: 0;
+    margin-bottom: 2rem;
+}
+
+@mixin h6 {
+    font-family: $font-body;
+    @include responsive-font(1.75rem, 1.25rem, 1440px, 320px);
+    font-weight: 400;
+    color: inherit;
+    line-height: 1.07;
+    margin: 0;
+    margin-bottom: 2rem;
+}
+
+@mixin body-copy {
+    font-family: $font-body;
+    font-size: 1rem;
+    line-height: 1.5;
+}

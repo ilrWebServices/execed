@@ -1,0 +1,259 @@
+@media screen and (min-width: $break-lg) {
+    .site-nav {
+        $parent: &;
+        overflow: hidden;
+        margin-bottom: 4rem;
+
+        &__main {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        &__item {
+            &:focus-within {
+                #{$parent}__secondary {
+                    opacity: 1;
+                    pointer-events: all;
+                    transition: opacity $easing--quick;
+                }
+            }
+
+            &:hover, &.focused {
+                #{$parent}__secondary {
+                    opacity: 1;
+                    pointer-events: all;
+                    transition: opacity $easing--quick;
+                }
+            }
+        }
+
+        &__link {
+            position: relative;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            padding: .75rem 1rem;
+            font-family: $font-body;
+            font-size: 1.125rem;
+            color: $dark;
+            border: 0;
+            border-bottom: 1px solid $secondary;
+            transition: color $easing--quick, border-color $easing--quick;
+
+            &::before {
+                content: '';
+                position: absolute;
+                z-index: -1;
+                left: -1.75rem; 
+                top: 0;
+                height: 100%;
+                width: calc(100% + 3.5rem);
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                z-index: 1;
+                right: 1rem;
+                top: calc(50% - .375rem);
+                width: .75rem;
+                height: .75rem;
+                pointer-events: none;
+                border-top: 1px solid $dark--dark;
+                border-right: 1px solid $dark--dark;
+                transform: rotate(45deg);
+                opacity: 0;
+                transition: opacity .01s linear .12s;
+            }
+
+            &:hover, &:focus {
+                text-decoration: none;
+                border-color: $primary;
+                color: $primary;
+                outline: none;
+
+                &::after {
+                    border-color: $primary;
+                }
+
+                svg {
+                    fill: $primary;
+                }
+            }
+        }
+
+        &__icon {
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 1.25rem;
+
+            svg {
+                fill: $dark--light;
+                width: 1.5rem;
+                height: 1.5rem;
+                transition: fill $easing--quick;
+            }
+        }
+
+        &__secondary {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            height: 100%;
+            background: $secondary--lighter;
+            padding: 2rem;
+            padding-top: 113px;
+            list-style-type: none;
+            min-width: 19rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity $easing--quick .12s;
+        }
+
+        &__secondary-link {
+            display: flex;
+            align-items: center;
+            padding: .75rem 1rem .75rem .75rem;
+            font-family: $font-body;
+            font-size: 1.125rem;
+            color: $dark;
+            border: 0;
+            border-bottom: 1px solid $secondary;
+            transition: color $easing--quick, border-color $easing--quick;
+
+            &:hover, &:focus {
+                text-decoration: none;
+                border-color: $primary;
+                color: $primary;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $break-lg) {
+    .site-nav {
+        $parent: &;
+
+        &__main {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            margin-top: .5rem;
+        }
+
+        &__item {
+            border-bottom: 1px solid lighten($secondary--light, 5%);
+
+            &:focus-within {
+                #{$parent}__secondary {
+                    opacity: 1;
+                    pointer-events: all;
+                    transition: opacity $easing--quick;
+                }
+            }
+
+            &:hover, &.focused {
+                #{$parent}__secondary {
+                    opacity: 1;
+                    pointer-events: all;
+                    transition: opacity $easing--quick;
+                }
+            }
+        }
+
+        &__link {
+            position: relative;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            font-family: $font-body;
+            font-size: 1rem;
+            color: $dark;
+            border: 0;
+            transition: color $easing--quick, border-color $easing--quick;
+
+            &::before {
+                content: '';
+                position: absolute;
+                z-index: -1;
+                left: -1.75rem; 
+                top: 0;
+                height: 100%;
+                width: calc(100% + 3.5rem);
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                z-index: 1;
+                right: 1rem;
+                top: calc(50% - .375rem);
+                width: .75rem;
+                height: .75rem;
+                pointer-events: none;
+                border-top: 1px solid $dark--dark;
+                border-right: 1px solid $dark--dark;
+                transform: rotate(45deg);
+                opacity: 0;
+                transition: opacity .01s linear .12s;
+            }
+
+            &:hover, &:focus {
+                text-decoration: none;
+                border-color: $primary;
+                color: $primary;
+                outline: none;
+
+                &::after {
+                    border-color: $primary;
+                }
+
+                svg {
+                    fill: $primary;
+                }
+            }
+        }
+
+        &__icon {
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 1rem;
+
+            svg {
+                fill: $dark--light;
+                width: 1.5rem;
+                height: 1.5rem;
+                transition: fill $easing--quick;
+            }
+        }
+
+        &__secondary {
+            background-color: $light--light;
+            padding: 1rem 2rem 1rem 3.25rem;
+            list-style-type: none;
+        }
+
+        &__secondary-link {
+            display: flex;
+            align-items: center;
+            padding: .5rem .75rem;
+            font-family: $font-body;
+            font-size: .875rem;
+            color: $dark;
+            border: 0;
+            transition: color $easing--quick, border-color $easing--quick;
+
+            &:hover, &:focus {
+                text-decoration: none;
+                border-color: $primary;
+                color: $primary;
+            }
+        }
+    }
+}

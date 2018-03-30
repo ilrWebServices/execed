@@ -1,0 +1,75 @@
+.page-hero {
+    $parent: &;
+
+    position: relative;
+    @include full-widthify;
+    min-height: 60vh;
+    padding: 4rem;
+    display: flex;
+
+    &__background {
+        @include overlay();
+        overflow: hidden;
+        background-color: $dark;
+        background-size: cover;
+        background-position: center;
+
+        video {
+            @supports (object-fit: cover) {
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover;
+            }
+
+            position: relative;
+            z-index: -2;
+        }
+    }
+
+    &__overlay {
+        @include overlay();
+        background-color: rgba($dark, .5);
+    }
+
+    &__content {
+        width: 100%;
+        max-width: $max-site-width;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $light--light;
+        margin: auto;
+    }
+
+    &__heading {
+        @include h2;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    &__subheading {
+        @include h6;
+        max-width: 66%;
+        text-align: center;
+    }
+
+    &__body {
+        max-width: 50%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: $break-meds) {
+    .page-hero {
+        padding: 2rem;
+        
+        &__subheading {
+            max-width: 100%;
+        }
+
+        &__body {
+            max-width: 100%;
+        }
+    }
+}

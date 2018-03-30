@@ -1,0 +1,85 @@
+.paragraph--type--wysiwyg, .field--name-body, .rte {
+    h1 {
+        @include h1;
+    }
+
+    h2 {
+        @include h2;
+    }
+
+    h3 {
+        @include h3;
+    }
+
+    h4 {
+        @include h4;
+    }
+
+    h5 {
+        @include h5;
+    }
+
+    h6 {
+        @include h6;
+    }
+
+    p {
+        @include body-copy;
+    }
+
+    li {
+        @include body-copy;
+    }
+
+    a {
+        color: $primary;
+        text-decoration: underline;
+        transition: color $easing--regular;
+
+        &:hover {
+            color: inherit;
+        }
+    }
+
+    img {
+        &:not([class*="align"]) {
+            width: 100%;
+            height: auto;
+            margin: .5rem 0;
+        }
+
+        &.align-left {
+            margin: .5rem .5rem .5rem 0;
+        }
+
+        &.align-center {
+            margin-top: .5rem;
+            margin-bottom: .5rem;
+        }
+
+        &.align-right {
+            margin: .5rem 0 .5rem .5rem;
+        }
+    }
+
+    .cta-button {
+        a {
+            padding: .5rem 1rem;
+            margin: 0;
+            background-color: transparent;
+            appearance: none;
+            border: 0;
+            border-radius: 0;
+            border-top: 1px solid currentColor;
+            border-bottom: 1px solid currentColor;
+            font-family: $font-body;
+            font-size: 1.25rem;
+            color: inherit;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}

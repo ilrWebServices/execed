@@ -1,0 +1,80 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a block.
+ *
+ * Available variables:
+ * - $block->subject: Block title.
+ * - $content: Block content.
+ * - $block->module: Module that generated the block.
+ * - $block->delta: An ID for the block, unique within each module.
+ * - $block->region: The block region embedding the current block.
+ * - $classes: String of classes that can be used to style contextually through
+ *   CSS. It can be manipulated through the variable $classes_array from
+ *   preprocess functions. The default values can be one or more of the
+ *   following:
+ *   - block: The current template type, i.e., "theming hook".
+ *   - block-[module]: The module generating the block. For example, the user
+ *     module is responsible for handling the default user navigation block. In
+ *     that case the class would be 'block-user'.
+ * - $title_prefix (array): An array containing additional output populated by
+ *   modules, intended to be displayed in front of the main title tag that
+ *   appears in the template.
+ * - $title_suffix (array): An array containing additional output populated by
+ *   modules, intended to be displayed after the main title tag that appears in
+ *   the template.
+ *
+ * Helper variables:
+ * - $classes_array: Array of html class attribute values. It is flattened
+ *   into a string within the variable $classes.
+ * - $block_zebra: Outputs 'odd' and 'even' dependent on each block region.
+ * - $zebra: Same output as $block_zebra but independent of any block region.
+ * - $block_id: Counter dependent on each block region.
+ * - $id: Same output as $block_id but independent of any block region.
+ * - $is_front: Flags true when presented in the front page.
+ * - $logged_in: Flags true when the current user is a logged-in member.
+ * - $is_admin: Flags true when the current user is an administrator.
+ * - $block_html_id: A valid HTML ID and guaranteed unique.
+ *
+ * @ingroup templates
+ *
+ * @see bootstrap_preprocess_block()
+ * @see template_preprocess()
+ * @see template_preprocess_block()
+ * @see bootstrap_process_block()
+ * @see template_process()
+ */
+#}
+<section class="chat-bubble__popup">
+	<button class="chat-bubble__close js-toggle-bubble">
+		<span class="visually-hidden">Close chat widget</span>
+	</button>
+	{% block content %}
+	<div class="chat-bubble__popup-content">
+		<div class="chat-bubble__contact">
+			{% if content.field_contact_heading | render is not empty %}
+				<h2 class="chat-bubble__heading">
+					{{ content.field_contact_heading['#items'].getString() }}
+				</h2>
+			{% endif %}
+			<div class="chat-bubble__address-wrap">
+				<svg class="chat-bubble__person" width="67" height="67" xmlns="http://www.w3.org/2000/svg"><path d="M66.972 33.514c.012-15.34-10.403-28.728-25.276-32.489-14.873-3.761-30.4 3.066-37.682 16.568C-3.268 31.096-.443 47.82 10.87 58.182l-.032.028 1.086.916c.071.059.15.108.218.166.578.479 1.175.933 1.786 1.373.197.142.395.285.596.423a33.862 33.862 0 0 0 4.735 2.728c.057.027.115.051.173.078a33.197 33.197 0 0 0 8.322 2.603 33.35 33.35 0 0 0 2.675.356c.111.01.219.016.33.025.898.075 1.807.122 2.727.122.912 0 1.812-.047 2.706-.12.112-.009.227-.015.34-.025a33.87 33.87 0 0 0 2.652-.35l.227-.04a33.21 33.21 0 0 0 7.984-2.503c.093-.043.186-.083.28-.127a32.983 32.983 0 0 0 2.739-1.447c.655-.386 1.3-.79 1.925-1.218.224-.153.447-.315.67-.476.535-.385 1.06-.781 1.57-1.197.111-.091.235-.17.345-.265l1.117-.93-.033-.028a33.397 33.397 0 0 0 10.964-24.76zm-64.536 0c-.012-14.29 9.729-26.743 23.601-30.171C39.91-.086 54.33 6.396 60.975 19.047c6.645 12.65 3.799 28.203-6.897 37.68a9.105 9.105 0 0 0-1.087-.654l-10.31-5.155a2.699 2.699 0 0 1-1.5-2.427v-3.6c.239-.295.49-.628.751-.995a24.822 24.822 0 0 0 3.186-6.238 4.42 4.42 0 0 0 2.539-4.005v-4.316a4.432 4.432 0 0 0-1.08-2.885V20.77a9.822 9.822 0 0 0-2.292-7.14c-2.244-2.562-5.877-3.86-10.797-3.86-4.92 0-8.553 1.298-10.797 3.858a9.822 9.822 0 0 0-2.293 7.14v5.683a4.436 4.436 0 0 0-1.079 2.885v4.316a4.428 4.428 0 0 0 1.63 3.435 22.882 22.882 0 0 0 3.765 7.78v3.524c0 .993-.542 1.907-1.414 2.384l-9.627 5.251a8.815 8.815 0 0 0-.916.58 30.977 30.977 0 0 1-10.32-23.09zm49.266 25.123c-.427.309-.86.607-1.3.895-.202.131-.403.263-.609.39-.574.356-1.16.693-1.755 1.011-.132.07-.265.136-.397.204a31.007 31.007 0 0 1-4.247 1.797c-.052.017-.103.037-.155.052a31.52 31.52 0 0 1-2.319.673h-.007c-.789.194-1.586.357-2.391.49l-.066.011c-.756.124-1.518.213-2.283.28-.135.011-.27.02-.407.03-.756.057-1.516.093-2.28.093-.771 0-1.54-.037-2.306-.095-.133-.01-.265-.018-.397-.03-.772-.068-1.54-.16-2.301-.284l-.103-.018a30.865 30.865 0 0 1-4.736-1.183l-.144-.048c-.766-.26-1.522-.55-2.267-.868l-.016-.008a31.755 31.755 0 0 1-2.076-.993c-.09-.047-.18-.09-.267-.138a31.405 31.405 0 0 1-2.36-1.407 30.534 30.534 0 0 1-1.63-1.135c-.055-.042-.107-.086-.162-.127.037-.022.078-.044.117-.065l9.628-5.252a5.149 5.149 0 0 0 2.685-4.523v-4.386l-.28-.338a20.33 20.33 0 0 1-3.654-7.57l-.112-.483-.415-.269a2.019 2.019 0 0 1-.936-1.695v-4.316c.002-.57.249-1.113.678-1.488l.402-.363v-6.782l-.011-.16a7.334 7.334 0 0 1 1.7-5.308c1.76-2.007 4.778-3.026 8.966-3.026 4.172 0 7.181 1.01 8.945 3.003 2.06 2.327 1.723 5.31 1.72 5.334l-.01 6.942.401.363c.43.376.676.918.679 1.488v4.316a2.033 2.033 0 0 1-1.438 1.917l-.606.186-.194.603a22.522 22.522 0 0 1-3.04 6.128c-.318.45-.63.85-.896 1.155l-.302.345v4.504a5.12 5.12 0 0 0 2.847 4.605l10.309 5.156.194.101c-.131.1-.265.19-.396.285z" fill="#FFF" fill-rule="evenodd"/></svg>
+				<div class="chat-bubble__address">
+					{% if content.field_contact_info | render is not empty %}
+						{{ content.field_contact_info }}
+					{% endif %}
+				</div>
+			</div>
+		</div>
+
+		<div class="chat-bubble__form-wrap">
+			{% if content.field_webform_heading | render is not empty %}
+				<h2 class="chat-bubble__heading">
+					{{ content.field_webform_heading['#items'].getString() }}
+				</h2>
+			{% endif %}
+			{{ content.field_chat_webform }}
+		</div>
+	</div>
+	{% endblock %}
+</section>

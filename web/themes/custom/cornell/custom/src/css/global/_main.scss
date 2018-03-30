@@ -1,0 +1,20 @@
+.content-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    max-width: calc(#{$max-site-width} + 8rem); // Max width + padding
+    padding: 0 4rem;
+}
+
+@media screen and (max-width: $break-lg) {
+    .content-wrapper {
+        max-width: calc(#{$max-site-width} + 4rem); // Max width + padding
+        padding: 0 2rem;
+    }
+}
+
+@media screen and (max-width: $break-meds) {
+    .content-wrapper {
+        max-width: calc(#{$max-site-width} + 2rem); // Max width + padding
+        padding: 0 1rem;
+    }
+}

@@ -1,0 +1,264 @@
+.site-footer {
+    width: 100%;
+    background-color: $dark;
+    color: $light--light;
+    padding: 4rem;
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    .block-webform {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding-bottom: 3rem;
+        border-bottom: 1px solid rgba($light--light, .25);
+
+        .block-title {
+            width: 40%;
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -.3px;
+        }
+
+        .webform-submission-add-form {
+            width: 60%;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .form-item {
+            margin: 0;
+            display: flex;
+            flex-grow: 1;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translate3d(0, -50%, 0);
+                width: 34px;
+                height: 25px;
+                background-image: url("data:image/svg+xml,%3Csvg width='34' height='25' xmlns='http://www.w3.org/2000/svg'%3E %3Cg fill='none' fill-rule='evenodd'%3E %3Cpath d='M17.022 23.997c-4.862 0-9.723-.002-14.584.003-.523.001-.962-.144-1.229-.6-.112-.195-.2-.436-.2-.656C1 15.917 1 9.091 1.001 2.264c0-.671.502-1.192 1.186-1.249a4.66 4.66 0 0 1 .355-.012c9.64-.001 19.28 0 28.922-.003.495 0 .969.064 1.251.506.147.232.273.526.273.793.015 6.8.012 13.6.011 20.4 0 .77-.551 1.296-1.366 1.297-2.8.003-5.6.001-8.4.001h-6.211zM3.609 21.44h26.777V3.58H3.61V21.44z' fill='%23FFF'/%3E %3Cpath d='M17.022 23.997c-4.862 0-9.723-.002-14.584.003-.523.001-.962-.144-1.229-.6-.112-.195-.2-.436-.2-.656C1 15.917 1 9.091 1.001 2.264c0-.671.502-1.192 1.186-1.249a4.66 4.66 0 0 1 .355-.012c9.64-.001 19.28 0 28.922-.003.495 0 .969.064 1.251.506.147.232.273.526.273.793.015 6.8.012 13.6.011 20.4 0 .77-.551 1.296-1.366 1.297-2.8.003-5.6.001-8.4.001h-6.211zM3.609 21.44h26.777V3.58H3.61V21.44z' stroke='%23222' stroke-width='.5'/%3E %3Cpath d='M16.818 15.667c.111-.148.166-.244.242-.318 2.97-2.927 5.943-5.852 8.916-8.777.7-.688 1.757-.512 2.153.357.224.492.102 1.001-.358 1.455-1.36 1.341-2.722 2.68-4.086 4.018-.07.068-.161.115-.243.172-.01.044-.023.087-.035.13.094.054.205.09.28.163a1812.19 1812.19 0 0 1 4.834 4.753c.513.505.614 1.066.302 1.594-.441.745-1.408.883-2.034.278-.735-.711-1.459-1.433-2.187-2.15l-2.743-2.699c-.07-.068-.142-.133-.224-.21-.08.074-.15.139-.219.206l-3.626 3.567c-.614.604-1.373.604-1.982-.002l-3.334-3.324c-.068-.068-.142-.132-.223-.21-.083.08-.156.144-.225.212-1.598 1.572-3.196 3.146-4.795 4.716-.408.4-.953.507-1.445.295-.484-.21-.803-.699-.785-1.205.015-.39.216-.687.486-.952 1.58-1.553 3.157-3.108 4.739-4.659.069-.068.165-.109.25-.162l-.001-.119c-.084-.054-.181-.094-.25-.164a2049.07 2049.07 0 0 1-4.423-4.404c-.504-.504-.591-1.095-.25-1.622.461-.714 1.412-.815 2.028-.207.815.807 1.625 1.62 2.438 2.43l6.573 6.552c.063.064.112.14.227.286' fill='%23FFF'/%3E %3Cpath d='M16.818 15.667c.111-.148.166-.244.242-.318 2.97-2.927 5.943-5.852 8.916-8.777.7-.688 1.757-.512 2.153.357.224.492.102 1.001-.358 1.455-1.36 1.341-2.722 2.68-4.086 4.018-.07.068-.161.115-.243.172-.01.044-.023.087-.035.13.094.054.205.09.28.163a1812.19 1812.19 0 0 1 4.834 4.753c.513.505.614 1.066.302 1.594-.441.745-1.408.883-2.034.278-.735-.711-1.459-1.433-2.187-2.15l-2.743-2.699c-.07-.068-.142-.133-.224-.21-.08.074-.15.139-.219.206l-3.626 3.567c-.614.604-1.373.604-1.982-.002l-3.334-3.324c-.068-.068-.142-.132-.223-.21-.083.08-.156.144-.225.212-1.598 1.572-3.196 3.146-4.795 4.716-.408.4-.953.507-1.445.295-.484-.21-.803-.699-.785-1.205.015-.39.216-.687.486-.952 1.58-1.553 3.157-3.108 4.739-4.659.069-.068.165-.109.25-.162l-.001-.119c-.084-.054-.181-.094-.25-.164a2049.07 2049.07 0 0 1-4.423-4.404c-.504-.504-.591-1.095-.25-1.622.461-.714 1.412-.815 2.028-.207.815.807 1.625 1.62 2.438 2.43l6.573 6.552c.063.064.112.14.227.286z' stroke='%23222' stroke-width='.5'/%3E %3C/g%3E %3C/svg%3E");
+            }
+        }
+
+        .form-actions {
+            margin: 0;
+            flex-shrink: 0;
+        }
+
+        .control-label {
+            @include visually-hidden;
+        }
+
+        input {
+            font-family: $font-body;
+            font-size: 1rem;
+            color: $secondary;
+            background-color: transparent;
+            appearance: none;
+            border-radius: 0;
+            border: 0;
+            border-bottom: 1px solid $light--light;
+            padding: 1rem 0 1rem 3rem;
+            height: auto;
+            color: $light--light;
+
+            &:focus {
+                border-color: $light--light;
+            }
+        }
+
+        .button {
+            padding: .5rem 1rem;
+            margin: 0;
+            margin-left: 1.5rem;
+            background-color: transparent;
+            appearance: none;
+            border: 0;
+            border-radius: 0;
+            border-top: 1px solid $light--light;
+            border-bottom: 1px solid $light--light;
+            font-family: $font-body;
+            font-size: 1.25rem;
+        }
+    }
+
+    nav {
+        width: 40%;
+        padding-right: 2rem;
+
+        .menu {
+            border: 0;
+            margin: 0;
+            padding: 0;
+            padding-top: 2rem;
+            columns: 2;
+
+            a {
+                padding: .5rem 1rem .5rem 0;
+                color: rgba($light--light, .8);
+                transition: color $easing--regular, transform $easing--regular;
+
+                &:hover {
+                    color: $light--light;
+                    background-color: transparent;
+                }
+
+                &:active {
+                    transform: translateY(1px);
+                }
+
+                &:focus {
+                    background: transparent;
+                }
+            }
+        }
+    }
+
+    .block-block-content {
+        padding-top: 2rem;
+        flex-shrink: 0;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        &:not(:last-of-type) {
+            flex-grow: 1;
+        }
+    }
+
+    .region-footer-bottom {
+        display: flex;
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        margin-top: 1rem;
+        border-top: 1px solid rgba($light--light, .25);
+
+        .block-block-content {
+            flex-shrink: 1;
+
+            p {
+                color: $secondary;
+            }
+
+            a {
+                text-decoration: none;
+                color: $secondary;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .block-social-media-links {
+        flex-shrink: 0;
+    }
+
+    .social-media-links {
+        &--platforms {
+            margin: 0;
+            padding-top: 1rem;
+
+            li {
+                margin-left: 1rem;
+            }
+
+            a {
+                color: $light--light;
+                transition: color $easing--regular;
+
+                &:hover {
+                    color: $secondary;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $break-lg) {
+    .site-footer {
+        padding: 3rem;
+
+        &__content {
+            //width: 75%;
+        }
+
+        .region-footer-bottom {
+            //width: 75%;
+        }
+
+        .block-webform {
+            flex-direction: column;
+
+            .block-title, .webform-submission-add-form {
+                width: 100%;
+            }
+            
+            .block-title {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $break-meds) {
+    .site-footer {
+        padding: 2rem;
+
+        &__content {
+            width: 100%;
+        }
+
+        .block-webform {
+            .webform-submission-add-form {
+                flex-wrap: wrap;
+            }
+
+            .form-item {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+
+            .form-actions {
+                width: 100%;
+            }
+
+            .button {
+                width: 100%;
+                margin: 0;
+                border: 1px solid $light--light;
+            }
+        }
+
+        nav {
+            width: 100%;
+            padding: 0;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba($light--light, .25);
+        }
+
+        .block-block-content {
+            width: 100%;
+        }
+
+        .region-footer-bottom {
+            width: 100%;
+            flex-direction: column;
+        }
+    }
+}

@@ -1,0 +1,283 @@
+@mixin form-input {
+    background-color: $light--light;
+    color: $dark;
+    border: 1px solid $dark;
+    border-radius: 0;
+    font-family: $font-body;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    box-shadow: none;
+    padding: .5rem .75rem;
+    height: auto;
+
+    &:focus {
+        border-color: $dark;
+        box-shadow: inset 0 1px 1px rgba(black, .075), 0 0 8px rgba($dark, .2);
+    }
+}
+
+.paragraph--type--webform {
+    position: relative;
+    padding: 4rem 0;
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        @include full-widthify;
+        height: 100%;
+        background-color: $secondary--light;
+    }
+}
+
+.webform-submission-form {
+    width: 33%;
+}
+
+.field, .webform-submission-form {
+    input {
+        &:not([type="button"]),
+        &:not([type="checkbox"]),
+        &:not([type="radio"]),
+        &:not([type="checkbox"]),
+        &:not([type="submit"]),
+        &:not([type="file"]) {
+            @include form-input;
+        }
+    }
+
+    input[type="checkbox"] {
+        opacity: 0;
+        pointer-events: none;
+
+        &:focus {
+            + label {
+                &::before {
+                    border-color: $dark;
+                    border-width: 2px;
+                    box-shadow: inset 0 1px 1px rgba(black, .075), 0 0 8px rgba($dark, .4);
+                }
+            }
+        }
+
+        &:checked {
+            + label {
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+
+        + label {
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 0;
+            font-size: 1.125rem;
+
+            &::before {
+                content: '';
+                width: 15px;
+                height: 15px;
+                background-color: $light--light;
+                border: 1px solid $dark;
+                margin-right: .5rem;
+                transition: box-shadow $easing--regular, border-color $easing--regular;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 2px;
+                top: calc(50% - 7px);
+                width: 16px;
+                height: 12px;
+                background-image: url("data:image/svg+xml,%3Csvg width='16' height='12' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M1.578 5.342L5.387 9.91 15 1' stroke='%23222' stroke-width='2' fill='none' fill-rule='evenodd'/%3E %3C/svg%3E");
+                transition: opacity $easing--regular;
+                opacity: 0;
+            }
+
+            &:hover, &:focus {
+                &::before {
+                    border-color: $dark;
+                    box-shadow: inset 0 1px 1px rgba(black, .075), 0 0 8px rgba($dark, .2);
+                }
+            }
+        }
+    }
+
+    input[type="radio"] {
+        opacity: 0;
+        pointer-events: none;
+
+        &:focus {
+            + label {
+                &::before {
+                    border-color: $dark;
+                    border-width: 2px;
+                    box-shadow: inset 0 1px 1px rgba(black, .075), 0 0 8px rgba($dark, .4);
+                }
+            }
+        }
+
+        &:checked {
+            + label {
+                &::before {
+                    background-image: radial-gradient(circle at center, $dark 0%, $dark 35%, $light--light 40%, $light--light 100%);
+                }
+            }
+        }
+
+        + label {
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 0;
+            font-size: 1.125rem;
+
+            &::before {
+                content: '';
+                width: 15px;
+                height: 15px;
+                background-color: $light--light;
+                border: 1px solid $dark;
+                border-radius: 50%;
+                background-image: radial-gradient(circle at center, $light--light 0%, $light--light 100%);
+                margin-right: .5rem;
+                transition: box-shadow $easing--regular, background-image $easing--regular;
+            }
+
+            &:hover, &:focus {
+                &::before {
+                    box-shadow: inset 0 1px 1px rgba(black, .075), 0 0 8px rgba($dark, .2);
+                }
+            }
+        }
+    }
+
+    textarea, select, .chosen-container {
+        @include form-input;
+    }
+
+    select {
+        cursor: pointer;
+    }
+
+    .form-tel {
+        width: 100%;
+    }
+
+    .select-wrapper {
+        &::after {
+            color: $dark;
+        }
+    }
+
+    label {
+        font-family: $font-body;
+        font-size: .875rem;
+        font-weight: 400;
+        color: $dark;
+    }
+
+    .form-required {
+        &::after {
+            margin-left: .25rem;
+            width: 7px;
+            background-size: 7px 7px;
+        }
+    }
+
+    .button--primary {
+        @include main-cta;
+    }
+
+    // Chosen plugin restyling
+    .chosen-container {
+        display: flex;
+        padding: 0;
+        width: 100% !important;
+    }
+
+    .chosen-container-active {
+        border-color: $dark;
+        box-shadow: inset 0 1px 1px rgba(black, .075), 0 0 8px rgba($dark, .2);
+
+        .chosen-single {
+            display: flex;
+            align-items: center;
+            border: 0;
+            width: 100%;
+            height: 100%;
+            padding: .5rem .75rem;
+            background: $light--light;
+        }
+    }
+    
+    .chosen-single {
+        display: flex;
+        align-items: center;
+        border: 0;
+        width: 100%;
+        height: 100%;
+        padding: .5rem .75rem;
+        background: $light--light;
+        
+        // Sigh... Dropdown label. no classes. all is madness
+        > span {
+            margin-top: .125rem;
+        }
+
+        // arrow icon.
+        > div {
+            display: none;
+        }
+    }
+
+    .chosen-search {
+        display: none;
+    }
+
+    .chosen-drop {
+        border: 1px solid $dark;
+        border-top: none;
+        width: calc(100% + 2px);
+        margin-left: -1px;
+        border-radius: 0;
+
+        li {
+            padding: .5rem .5rem;
+        }
+
+        li.highlighted {
+            background: $dark;
+        }
+    }
+}
+
+@media screen and (max-width: $break-xl) {
+    .webform-submission-form {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: $break-lg) {
+    .paragraph--type--webform {
+        padding: 2rem 0;
+    }
+
+    .webform-submission-form {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: $break-meds) {
+    .paragraph--type--webform {
+        padding: 1rem 0;
+    }
+
+    .webform-submission-form {
+        width: 100%;
+    }
+}
