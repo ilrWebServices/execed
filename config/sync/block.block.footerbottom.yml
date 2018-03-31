@@ -1,0 +1,25 @@
+uuid: bd55ca7c-325a-4ed8-b0af-9573416a5117
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:096d2e77-ef45-4949-afc1-b15f92cee7cc'
+  module:
+    - block_content
+  theme:
+    - cornell
+id: footerbottom
+theme: cornell
+region: footer_bottom
+weight: -14
+provider: null
+plugin: 'block_content:096d2e77-ef45-4949-afc1-b15f92cee7cc'
+settings:
+  id: 'block_content:096d2e77-ef45-4949-afc1-b15f92cee7cc'
+  label: 'Footer bottom'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,19 @@
+uuid: f8bdd311-ab4e-499d-bb59-38b1e5545e7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subline
+    - paragraphs.paragraphs_type.tout_block
+id: paragraph.tout_block.field_subline
+field_name: field_subline
+entity_type: paragraph
+bundle: tout_block
+label: Subline
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

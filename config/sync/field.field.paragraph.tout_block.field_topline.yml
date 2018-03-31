@@ -1,0 +1,19 @@
+uuid: 60c968c6-762e-4415-afcd-afcc43cf4f32
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_topline
+    - paragraphs.paragraphs_type.tout_block
+id: paragraph.tout_block.field_topline
+field_name: field_topline
+entity_type: paragraph
+bundle: tout_block
+label: Topline
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,25 @@
+uuid: 9c729e2e-0e82-4449-8278-1c23f05d9d6f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a6f063bd-d440-4db8-9da4-0e019e3738fc'
+  module:
+    - block_content
+  theme:
+    - cornell
+id: footerlogo
+theme: cornell
+region: footer
+weight: -10
+provider: null
+plugin: 'block_content:a6f063bd-d440-4db8-9da4-0e019e3738fc'
+settings:
+  id: 'block_content:a6f063bd-d440-4db8-9da4-0e019e3738fc'
+  label: 'Footer Logo'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

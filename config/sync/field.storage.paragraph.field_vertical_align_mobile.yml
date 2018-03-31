@@ -1,0 +1,30 @@
+uuid: dede51f5-5b69-411f-af2e-ab5744258cec
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_vertical_align_mobile
+field_name: field_vertical_align_mobile
+entity_type: paragraph
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: 0
+      label: Top
+    -
+      value: 1
+      label: Middle
+    -
+      value: 2
+      label: Bottom
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

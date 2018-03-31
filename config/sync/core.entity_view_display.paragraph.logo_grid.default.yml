@@ -1,0 +1,36 @@
+uuid: fc89144d-8cbd-4948-9144-c72bbd902d95
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.logo_grid.field_header
+    - field.field.paragraph.logo_grid.field_logos
+    - paragraphs.paragraphs_type.logo_grid
+  module:
+    - svg_image
+id: paragraph.logo_grid.default
+targetEntityType: paragraph
+bundle: logo_grid
+mode: default
+content:
+  field_header:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_logos:
+    weight: 1
+    label: above
+    settings:
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden: {  }

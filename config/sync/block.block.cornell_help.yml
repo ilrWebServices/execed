@@ -1,0 +1,22 @@
+uuid: 3c75dcc4-ba4a-4539-907c-cf7444b356d1
+langcode: en
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - cornell
+_core:
+  default_config_hash: MhtNdV__HKRTab0ZPjkPNfYL4Ng4UPBucDLoC7Rg5Eo
+id: cornell_help
+theme: cornell
+region: header
+weight: -2
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

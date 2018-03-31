@@ -1,0 +1,9 @@
+uuid: d815545c-82af-4d5c-9323-f34b3f262bc2
+langcode: en
+status: true
+dependencies: {  }
+id: image_touts
+label: 'Text Blocks'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,9 @@
+uuid: 2fa38b58-1651-4ab0-9da5-6c7b7d87dbe9
+langcode: en
+status: true
+dependencies: {  }
+id: content_grid
+label: 'Content Grid'
+icon_uuid: null
+description: 'This is a Content Grid Component'
+behavior_plugins: {  }

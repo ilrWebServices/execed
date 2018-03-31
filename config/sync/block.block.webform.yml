@@ -1,0 +1,22 @@
+uuid: 17c12bd9-281b-4467-91df-bd1ac2799022
+langcode: en
+status: true
+dependencies:
+  module:
+    - webform
+  theme:
+    - cornell
+id: webform
+theme: cornell
+region: footer
+weight: -13
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: 'Subscribe to our email updates'
+  provider: webform
+  label_display: visible
+  webform_id: footer_signup
+  default_data: ''
+visibility: {  }

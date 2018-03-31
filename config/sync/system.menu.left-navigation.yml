@@ -1,0 +1,8 @@
+uuid: 8a5725d5-3a37-432e-b60e-bee8ccc4e14b
+langcode: en
+status: true
+dependencies: {  }
+id: left-navigation
+label: 'Left navigation'
+description: ''
+locked: false

@@ -1,0 +1,58 @@
+uuid: 0a965c46-18bc-4b32-9a44-d17584c59729
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.chat_bubble
+    - field.field.block_content.chat_bubble.field_chat_webform
+    - field.field.block_content.chat_bubble.field_contact_heading
+    - field.field.block_content.chat_bubble.field_contact_info
+    - field.field.block_content.chat_bubble.field_webform_heading
+  module:
+    - text
+    - webform
+id: block_content.chat_bubble.default
+targetEntityType: block_content
+bundle: chat_bubble
+mode: default
+content:
+  field_chat_webform:
+    weight: 4
+    settings:
+      default_data: true
+    third_party_settings: {  }
+    type: webform_entity_reference_select
+    region: content
+  field_contact_heading:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_contact_info:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_webform_heading:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,9 @@
+uuid: d73f1732-2c77-4495-ae28-ccd600ef990a
+langcode: en
+status: true
+dependencies: {  }
+id: tout_block
+label: 'Text Block'
+icon_uuid: null
+description: 'Changed from Content Block to Text Block'
+behavior_plugins: {  }

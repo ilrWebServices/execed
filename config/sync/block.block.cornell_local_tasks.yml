@@ -1,0 +1,22 @@
+uuid: 4571bcbe-158e-4b8c-9b11-5ec5f782f32e
+langcode: en
+status: true
+dependencies:
+  theme:
+    - cornell
+_core:
+  default_config_hash: qHdtze2DZ2mFfaJadxjZz6epm92_SN9SAFY4yJGl8Fo
+id: cornell_local_tasks
+theme: cornell
+region: header
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

@@ -1,0 +1,8 @@
+uuid: 93310a32-b09e-4260-b7fe-0465adac6d7f
+langcode: en
+status: true
+dependencies: {  }
+id: chat_bubble
+label: 'Chat Bubble'
+revision: 0
+description: ''

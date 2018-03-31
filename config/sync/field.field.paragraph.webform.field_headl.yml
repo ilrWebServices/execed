@@ -1,0 +1,19 @@
+uuid: 38d94ef0-01a0-438f-843d-4005d6cfc635
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_headl
+    - paragraphs.paragraphs_type.webform
+id: paragraph.webform.field_headl
+field_name: field_headl
+entity_type: paragraph
+bundle: webform
+label: Headline
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

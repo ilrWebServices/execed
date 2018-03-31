@@ -1,0 +1,21 @@
+uuid: cd7b5d14-89ed-4b48-afde-c0699a6d0591
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_example
+    - paragraphs.paragraphs_type.text_block_content_grid
+  module:
+    - text
+id: paragraph.text_block_content_grid.field_example
+field_name: field_example
+entity_type: paragraph
+bundle: text_block_content_grid
+label: Example
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

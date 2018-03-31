@@ -1,0 +1,27 @@
+uuid: 195fc5ae-6666-470f-b3b6-7fcb44bc1329
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_horizontal_align_mobile
+field_name: field_horizontal_align_mobile
+entity_type: paragraph
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: 0
+      label: Left
+    -
+      value: 1
+      label: Center
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

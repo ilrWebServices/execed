@@ -1,0 +1,74 @@
+uuid: 88a7b0d9-fb6b-49bc-97f7-366bbea80a28
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tout_block.field_description
+    - field.field.paragraph.tout_block.field_headline
+    - field.field.paragraph.tout_block.field_image
+    - field.field.paragraph.tout_block.field_link
+    - field.field.paragraph.tout_block.field_subline
+    - field.field.paragraph.tout_block.field_topline
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.tout_block
+  module:
+    - link
+    - svg_image
+    - text
+id: paragraph.tout_block.default
+targetEntityType: paragraph
+bundle: tout_block
+mode: default
+content:
+  field_description:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_headline:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_image:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_link:
+    weight: 5
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_subline:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_topline:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,19 @@
+uuid: 430594f8-fa19-44d1-8177-762b2ed151c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subhead
+    - paragraphs.paragraphs_type.cornell_slideshow_
+id: paragraph.cornell_slideshow_.field_subhead
+field_name: field_subhead
+entity_type: paragraph
+bundle: cornell_slideshow_
+label: Subhead
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

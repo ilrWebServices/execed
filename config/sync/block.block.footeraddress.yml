@@ -1,0 +1,25 @@
+uuid: e01a51c7-37d2-4908-a95d-190110f9ae09
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:dd54d0d3-804c-40a6-9592-f8ade7595254'
+  module:
+    - block_content
+  theme:
+    - cornell
+id: footeraddress
+theme: cornell
+region: footer
+weight: -11
+provider: null
+plugin: 'block_content:dd54d0d3-804c-40a6-9592-f8ade7595254'
+settings:
+  id: 'block_content:dd54d0d3-804c-40a6-9592-f8ade7595254'
+  label: 'Footer address'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

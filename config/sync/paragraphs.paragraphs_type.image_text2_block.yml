@@ -1,0 +1,9 @@
+uuid: df7ce6db-9e53-4e66-88d3-d12d21f1fe8f
+langcode: en
+status: true
+dependencies: {  }
+id: image_text2_block
+label: 'Image + Text 2-Block'
+icon_uuid: null
+description: 'This is Image and two text block component'
+behavior_plugins: {  }

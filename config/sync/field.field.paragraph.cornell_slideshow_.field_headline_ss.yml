@@ -1,0 +1,19 @@
+uuid: 845f1428-592a-42fb-93d0-8b1df9b7c895
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_headline_ss
+    - paragraphs.paragraphs_type.cornell_slideshow_
+id: paragraph.cornell_slideshow_.field_headline_ss
+field_name: field_headline_ss
+entity_type: paragraph
+bundle: cornell_slideshow_
+label: Headline
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,23 @@
+uuid: cadde50f-fb83-42f1-9de4-08eea1df35e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_overlay
+    - paragraphs.paragraphs_type.hero
+id: paragraph.hero.field_overlay
+field_name: field_overlay
+entity_type: paragraph
+bundle: hero
+label: 'Show overlay'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: shown
+  off_label: hidden
+field_type: boolean

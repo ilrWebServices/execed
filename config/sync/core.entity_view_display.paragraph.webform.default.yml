@@ -1,0 +1,47 @@
+uuid: 14d66da8-5dad-45b1-9535-4b6eb1260ae4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.webform.field_headl
+    - field.field.paragraph.webform.field_image_webform
+    - field.field.paragraph.webform.field_webform
+    - paragraphs.paragraphs_type.webform
+  module:
+    - svg_image
+    - webform
+id: paragraph.webform.default
+targetEntityType: paragraph
+bundle: webform
+mode: default
+content:
+  field_headl:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_image_webform:
+    weight: 2
+    label: above
+    settings:
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_webform:
+    weight: 0
+    label: above
+    settings:
+      source_entity: true
+    third_party_settings: {  }
+    type: webform_entity_reference_entity_view
+    region: content
+hidden: {  }

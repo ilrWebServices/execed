@@ -1,0 +1,22 @@
+uuid: 531d6c50-5576-4078-b2e0-31510c8d9d6b
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - cornell
+_core:
+  default_config_hash: iggZSiUKz4mYP1YPJ8SsUfFu79HIgOTt6IDy3Up59aM
+id: cornell_powered
+theme: cornell
+region: footer
+weight: -9
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

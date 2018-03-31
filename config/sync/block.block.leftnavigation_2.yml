@@ -1,0 +1,27 @@
+uuid: 2bdb80b1-0b3a-4f45-9d54-eca7efce67c2
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.left-navigation
+  module:
+    - menu_block
+  theme:
+    - cornell
+id: leftnavigation_2
+theme: cornell
+region: navigation_collapsible
+weight: -10
+provider: null
+plugin: 'menu_block:left-navigation'
+settings:
+  id: 'menu_block:left-navigation'
+  label: 'left navigation'
+  provider: menu_block
+  label_display: visible
+  level: 1
+  depth: 0
+  expand: 1
+  parent: 'left-navigation:'
+  suggestion: left_navigation
+visibility: {  }

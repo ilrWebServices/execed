@@ -1,0 +1,18 @@
+uuid: bdaab50f-6453-4857-89ee-6625c00ddb7a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Person
+type: person
+description: 'Use <em>person</em> to add faculty, staff, and speakers to the site.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,29 @@
+uuid: 7d6de711-e7b0-4328-9c34-5e97a577e403
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_program
+    - node.type.person
+    - taxonomy.vocabulary.programs
+id: node.person.field_related_program
+field_name: field_related_program
+entity_type: node
+bundle: person
+label: 'Related Program'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      programs: programs
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,26 @@
+uuid: 2c5a5135-18cd-4958-910d-741cc3bee69f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_insights
+    - node.type.person
+  module:
+    - viewsreference
+id: node.person.field_related_insights
+field_name: field_related_insights
+entity_type: node
+bundle: person
+label: 'Related Insights'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  plugin_types:
+    block: block
+  preselect_views: {  }
+  handler: 'default:entity_view_display'
+  handler_settings: {  }
+field_type: viewsreference

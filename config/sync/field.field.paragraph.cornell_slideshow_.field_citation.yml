@@ -1,0 +1,19 @@
+uuid: 1388b416-2725-41f5-9ee5-4c7cc0954a30
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_citation
+    - paragraphs.paragraphs_type.cornell_slideshow_
+id: paragraph.cornell_slideshow_.field_citation
+field_name: field_citation
+entity_type: paragraph
+bundle: cornell_slideshow_
+label: Citation
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,22 @@
+uuid: 5e1bbd29-2d02-4b32-bf18-60a7188b33a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.insights
+  module:
+    - text
+id: node.insights.body
+field_name: body
+entity_type: node
+bundle: insights
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

@@ -1,0 +1,22 @@
+uuid: 1fda1548-aed0-41b5-9255-3eec50d087cb
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - cornell
+_core:
+  default_config_hash: F3d5hyAFunLh4PhGviJF019fHn1Z3_zy5gzsQ0tX1K0
+id: cornell_search
+theme: cornell
+region: navigation
+weight: -10
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: '0'
+visibility: {  }

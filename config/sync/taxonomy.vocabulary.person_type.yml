@@ -1,0 +1,9 @@
+uuid: 3f5c34e3-a953-44cc-8363-e4ce682ecde3
+langcode: en
+status: true
+dependencies: {  }
+name: 'Person Type'
+vid: person_type
+description: ''
+hierarchy: 0
+weight: 0

@@ -1,0 +1,19 @@
+uuid: 56df3a23-0910-4b96-ba27-142c10492676
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subhead_cgrid
+    - paragraphs.paragraphs_type.content_grid
+id: paragraph.content_grid.field_subhead_cgrid
+field_name: field_subhead_cgrid
+entity_type: paragraph
+bundle: content_grid
+label: Subhead
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

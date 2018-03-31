@@ -1,0 +1,148 @@
+uuid: e7da789d-a73c-4823-8d16-b3a4c272f86a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.landing_page.body
+    - field.field.node.landing_page.field_background_video
+    - field.field.node.landing_page.field_components
+    - field.field.node.landing_page.field_featured_image_landingpage
+    - field.field.node.landing_page.field_meta_tags
+    - field.field.node.landing_page.field_program_landingpage
+    - field.field.node.landing_page.field_subhead
+    - field.field.node.landing_page.field_yoast_seo
+    - image.style.thumbnail
+    - node.type.landing_page
+  module:
+    - metatag
+    - paragraphs
+    - path
+    - svg_image
+    - text
+    - video
+    - yoast_seo
+id: node.landing_page.default
+targetEntityType: node
+bundle: landing_page
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 8
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_background_video:
+    weight: 11
+    settings:
+      file_extensions: 'mp4 ogv webm'
+      file_directory: 'video-thumbnails/[date:custom:Y]-[date:custom:m]'
+      max_filesize: '3 MB'
+      uri_scheme: public
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: video_upload
+    region: content
+  field_components:
+    weight: 12
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: paragraphs
+    region: content
+  field_featured_image_landingpage:
+    weight: 9
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_meta_tags:
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  field_program_landingpage:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_subhead:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_yoast_seo:
+    weight: 15
+    settings:
+      body: body
+    third_party_settings: {  }
+    type: yoast_seo_widget
+    region: content
+  path:
+    type: path
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 3
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 6
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

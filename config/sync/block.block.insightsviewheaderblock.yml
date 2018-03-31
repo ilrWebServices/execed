@@ -1,0 +1,31 @@
+uuid: f5d131f1-f8f7-4ddb-8480-aa45df3f674d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:7ca8917d-e2ab-4862-87d7-f197fef62483'
+  module:
+    - block_content
+    - system
+  theme:
+    - cornell
+id: insightsviewheaderblock
+theme: cornell
+region: content
+weight: -13
+provider: null
+plugin: 'block_content:7ca8917d-e2ab-4862-87d7-f197fef62483'
+settings:
+  id: 'block_content:7ca8917d-e2ab-4862-87d7-f197fef62483'
+  label: 'Insights View Header Block'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /insights
+    negate: false
+    context_mapping: {  }

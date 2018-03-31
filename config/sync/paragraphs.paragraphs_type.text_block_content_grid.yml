@@ -1,0 +1,9 @@
+uuid: 10262735-35b5-4799-8e2a-c830b91bf65f
+langcode: en
+status: true
+dependencies: {  }
+id: text_block_content_grid
+label: 'Text Block Content Grid'
+icon_uuid: null
+description: 'This is a custom component to be used in  content grid component.'
+behavior_plugins: {  }

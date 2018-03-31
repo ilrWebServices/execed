@@ -1,0 +1,9 @@
+uuid: 6bc85cd8-2ea0-4296-bd24-1f3716bfd28c
+langcode: en
+status: true
+dependencies: {  }
+id: cornell_slideshow_
+label: 'Cornell Slideshow '
+icon_uuid: null
+description: 'This is a custom paragraph style for Slideshow Gallery content.'
+behavior_plugins: {  }

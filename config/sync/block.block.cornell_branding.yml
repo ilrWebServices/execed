@@ -1,0 +1,25 @@
+uuid: 2746e5f5-1e00-4add-aba7-23ace9809ee8
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - cornell
+_core:
+  default_config_hash: Cy3vkpYrD1O5JG-BeEnokF0bByHYDEa8CBfWivB4_SQ
+id: cornell_branding
+theme: cornell
+region: navigation_collapsible
+weight: -9
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

@@ -1,0 +1,21 @@
+uuid: ca5b511b-6564-41b5-835f-f4449a24de29
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body_imgtxtblock
+    - paragraphs.paragraphs_type.image_text2_block
+  module:
+    - text
+id: paragraph.image_text2_block.field_body_imgtxtblock
+field_name: field_body_imgtxtblock
+entity_type: paragraph
+bundle: image_text2_block
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

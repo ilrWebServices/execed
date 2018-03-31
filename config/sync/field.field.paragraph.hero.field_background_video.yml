@@ -1,0 +1,26 @@
+uuid: 34f217f2-f914-4d25-932d-5ff04ebbebd1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_video
+    - paragraphs.paragraphs_type.hero
+  module:
+    - video
+id: paragraph.hero.field_background_video
+field_name: field_background_video
+entity_type: paragraph
+bundle: hero
+label: 'Background Video'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_extensions: ''
+  file_directory: 'videos/[date:custom:Y]-[date:custom:m]'
+  max_filesize: ''
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: video

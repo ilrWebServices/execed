@@ -1,0 +1,9 @@
+uuid: 6a9247eb-4843-49c9-b64c-19623de8a97a
+langcode: en
+status: true
+dependencies: {  }
+id: logo_grid
+label: 'Logo Grid'
+icon_uuid: null
+description: 'This is a Logo Grid Component'
+behavior_plugins: {  }

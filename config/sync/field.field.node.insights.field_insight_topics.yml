@@ -1,0 +1,29 @@
+uuid: 25dd8194-1642-43db-9986-37d6a234ab52
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_insight_topics
+    - node.type.insights
+    - taxonomy.vocabulary.insight_topics
+id: node.insights.field_insight_topics
+field_name: field_insight_topics
+entity_type: node
+bundle: insights
+label: Topics
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      insight_topics: insight_topics
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,19 @@
+uuid: dee3f0e3-bf32-40b1-8556-9761ace2c927
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_person_prefix
+    - node.type.person
+id: node.person.field_person_prefix
+field_name: field_person_prefix
+entity_type: node
+bundle: person
+label: Prefix
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,23 @@
+uuid: 2164226e-18bc-4a1d-8067-cc6035ed10f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_vertical_align_desktop
+    - paragraphs.paragraphs_type.hero
+  module:
+    - options
+id: paragraph.hero.field_vertical_align_desktop
+field_name: field_vertical_align_desktop
+entity_type: paragraph
+bundle: hero
+label: Desktop
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

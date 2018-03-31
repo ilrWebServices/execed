@@ -1,0 +1,23 @@
+uuid: 95191f3e-a923-4398-b4ab-89c96b465bcd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link_tblock
+    - paragraphs.paragraphs_type.text_block_content_grid
+  module:
+    - link
+id: paragraph.text_block_content_grid.field_link_tblock
+field_name: field_link_tblock
+entity_type: paragraph
+bundle: text_block_content_grid
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

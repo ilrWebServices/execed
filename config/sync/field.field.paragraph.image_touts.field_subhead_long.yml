@@ -1,0 +1,21 @@
+uuid: 4e886a7b-e575-4a5a-9e0a-63820e0c9ffc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subhead_long
+    - paragraphs.paragraphs_type.image_touts
+  module:
+    - text
+id: paragraph.image_touts.field_subhead_long
+field_name: field_subhead_long
+entity_type: paragraph
+bundle: image_touts
+label: Subhead
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,25 @@
+uuid: 29e82850-fa0c-4ae8-b6c6-8a670a999711
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:chat_bubble:1503d380-40aa-40d7-b228-4a243a0d5abd'
+  module:
+    - block_content
+  theme:
+    - cornell
+id: thechatpopup
+theme: cornell
+region: chat_bubble
+weight: -13
+provider: null
+plugin: 'block_content:1503d380-40aa-40d7-b228-4a243a0d5abd'
+settings:
+  id: 'block_content:1503d380-40aa-40d7-b228-4a243a0d5abd'
+  label: 'The chat popup'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

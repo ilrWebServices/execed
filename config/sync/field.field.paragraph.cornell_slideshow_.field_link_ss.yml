@@ -1,0 +1,23 @@
+uuid: 98626e60-b594-4403-8289-0076bdae2974
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link_ss
+    - paragraphs.paragraphs_type.cornell_slideshow_
+  module:
+    - link
+id: paragraph.cornell_slideshow_.field_link_ss
+field_name: field_link_ss
+entity_type: paragraph
+bundle: cornell_slideshow_
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

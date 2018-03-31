@@ -1,0 +1,53 @@
+uuid: e5fb552e-0d8e-4f57-a57c-29058d4b3623
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_touts.field_add_top_line
+    - field.field.paragraph.image_touts.field_headline
+    - field.field.paragraph.image_touts.field_subhead_long
+    - field.field.paragraph.image_touts.field_tout_content_block
+    - paragraphs.paragraphs_type.image_touts
+  module:
+    - entity_reference_revisions
+    - text
+id: paragraph.image_touts.default
+targetEntityType: paragraph
+bundle: image_touts
+mode: default
+content:
+  field_add_top_line:
+    weight: 5
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_headline:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_subhead_long:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_tout_content_block:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

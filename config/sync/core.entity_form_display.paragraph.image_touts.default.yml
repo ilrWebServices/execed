@@ -1,0 +1,59 @@
+uuid: afb967cb-a8b3-4654-bd49-dd5bd2fb72ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_touts.field_add_top_line
+    - field.field.paragraph.image_touts.field_headline
+    - field.field.paragraph.image_touts.field_subhead_long
+    - field.field.paragraph.image_touts.field_tout_content_block
+    - paragraphs.paragraphs_type.image_touts
+  module:
+    - paragraphs
+    - text
+id: paragraph.image_touts.default
+targetEntityType: paragraph
+bundle: image_touts
+mode: default
+content:
+  field_add_top_line:
+    weight: 3
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_headline:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_subhead_long:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_tout_content_block:
+    type: paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: tout_block
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

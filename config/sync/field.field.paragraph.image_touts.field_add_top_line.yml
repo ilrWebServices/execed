@@ -1,0 +1,23 @@
+uuid: 20f02d55-2120-44dd-b2c4-4f54574aefb0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_add_top_line
+    - paragraphs.paragraphs_type.image_touts
+id: paragraph.image_touts.field_add_top_line
+field_name: field_add_top_line
+entity_type: paragraph
+bundle: image_touts
+label: 'Add Top Line'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

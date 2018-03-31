@@ -1,0 +1,100 @@
+uuid: 4b6322ae-d4d5-4043-90a0-5a0af5a8aa92
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_text2_block.field_back
+    - field.field.paragraph.image_text2_block.field_background_color
+    - field.field.paragraph.image_text2_block.field_body_imgtxtblock
+    - field.field.paragraph.image_text2_block.field_eye
+    - field.field.paragraph.image_text2_block.field_headline_imgtxtblock
+    - field.field.paragraph.image_text2_block.field_image_alignment
+    - field.field.paragraph.image_text2_block.field_image_imgtxtblock
+    - field.field.paragraph.image_text2_block.field_link_imgtxtblock
+    - paragraphs.paragraphs_type.image_text2_block
+  module:
+    - link
+    - options
+    - svg_image
+    - text
+id: paragraph.image_text2_block.default
+targetEntityType: paragraph
+bundle: image_text2_block
+mode: default
+content:
+  field_back:
+    weight: 2
+    label: above
+    settings:
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_background_color:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_body_imgtxtblock:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_eye:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_headline_imgtxtblock:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_image_alignment:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_image_imgtxtblock:
+    weight: 1
+    label: above
+    settings:
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_link_imgtxtblock:
+    weight: 5
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden: {  }

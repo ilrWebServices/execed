@@ -1,0 +1,21 @@
+uuid: 9bb4de96-5c82-469f-977e-b7b99da1b852
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resources
+    - node.type.person
+  module:
+    - text
+id: node.person.field_resources
+field_name: field_resources
+entity_type: node
+bundle: person
+label: Resources
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

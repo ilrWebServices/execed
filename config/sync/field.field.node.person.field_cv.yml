@@ -1,0 +1,27 @@
+uuid: 7894fb3d-8d2f-4870-9556-4b9220036ace
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cv
+    - node.type.person
+  module:
+    - file
+id: node.person.field_cv
+field_name: field_cv
+entity_type: node
+bundle: person
+label: CV
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

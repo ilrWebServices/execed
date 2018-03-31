@@ -1,0 +1,88 @@
+uuid: c06bccdf-b7e9-4b3d-8ae2-24c31a34c7e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_text2_block.field_back
+    - field.field.paragraph.image_text2_block.field_background_color
+    - field.field.paragraph.image_text2_block.field_body_imgtxtblock
+    - field.field.paragraph.image_text2_block.field_eye
+    - field.field.paragraph.image_text2_block.field_headline_imgtxtblock
+    - field.field.paragraph.image_text2_block.field_image_alignment
+    - field.field.paragraph.image_text2_block.field_image_imgtxtblock
+    - field.field.paragraph.image_text2_block.field_link_imgtxtblock
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.image_text2_block
+  module:
+    - link
+    - svg_image
+    - text
+id: paragraph.image_text2_block.default
+targetEntityType: paragraph
+bundle: image_text2_block
+mode: default
+content:
+  field_back:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_background_color:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_body_imgtxtblock:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_eye:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_headline_imgtxtblock:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_image_alignment:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_image_imgtxtblock:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_link_imgtxtblock:
+    weight: 5
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

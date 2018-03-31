@@ -1,0 +1,23 @@
+uuid: cb31d46c-843e-49f0-9a9c-2087be3f88eb
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - cornell
+id: sitebranding
+theme: cornell
+region: navigation
+weight: -12
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

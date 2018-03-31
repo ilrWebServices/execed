@@ -1,0 +1,112 @@
+uuid: 2dda5b64-6562-4104-8d6d-a4e7511483d4
+langcode: en
+status: false
+dependencies:
+  module:
+    - social_media_links
+  theme:
+    - cornell
+id: socialmedialinks
+theme: cornell
+region: footer_bottom
+weight: -13
+provider: null
+plugin: social_media_links_block
+settings:
+  id: social_media_links_block
+  label: 'Social Media Links'
+  provider: social_media_links
+  label_display: '0'
+  platforms:
+    linkedin:
+      value: '#'
+      description: ''
+      weight: '-30'
+    facebook:
+      value: '#'
+      description: ''
+      weight: '-29'
+    instagram:
+      value: '#'
+      description: ''
+      weight: '-28'
+    twitter:
+      value: '#'
+      description: ''
+      weight: '-27'
+    youtube:
+      value: '#'
+      description: ''
+      weight: '-26'
+    contact:
+      value: ''
+      description: ''
+      weight: '-25'
+    flickr:
+      value: ''
+      description: ''
+      weight: '-24'
+    drupal:
+      value: ''
+      description: ''
+      weight: '-23'
+    email:
+      value: ''
+      description: ''
+      weight: '-22'
+    github:
+      value: ''
+      description: ''
+      weight: '-21'
+    vimeo:
+      value: ''
+      description: ''
+      weight: '-20'
+    rss:
+      value: ''
+      description: ''
+      weight: '-19'
+    vkontakte:
+      value: ''
+      description: ''
+      weight: '-18'
+    bitbucket:
+      value: ''
+      description: ''
+      weight: '-17'
+    tumblr:
+      value: ''
+      description: ''
+      weight: '-16'
+    slideshare:
+      value: ''
+      description: ''
+      weight: '-15'
+    googleplus:
+      value: ''
+      description: ''
+      weight: '-14'
+    youtube_channel:
+      value: ''
+      description: ''
+      weight: '-13'
+    pinterest:
+      value: ''
+      description: ''
+      weight: '-12'
+    behance:
+      value: ''
+      description: ''
+      weight: '-11'
+  appearance:
+    orientation: h
+    show_name: 0
+  link_attributes:
+    target: '<none>'
+    rel: '<none>'
+  iconset:
+    style: 'fontawesome:2x'
+    installed_iconsets:
+      fontawesome:
+        examples: ''
+visibility: {  }

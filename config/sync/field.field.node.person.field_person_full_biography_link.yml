@@ -1,0 +1,23 @@
+uuid: c0d1160f-1ebe-43b6-9be3-b394339b343d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_person_full_biography_link
+    - node.type.person
+  module:
+    - link
+id: node.person.field_person_full_biography_link
+field_name: field_person_full_biography_link
+entity_type: node
+bundle: person
+label: 'Full Biography Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

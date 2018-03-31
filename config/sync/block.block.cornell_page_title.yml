@@ -1,0 +1,20 @@
+uuid: 4c44afc5-8961-499e-860c-0dca9288869f
+langcode: en
+status: true
+dependencies:
+  theme:
+    - cornell
+_core:
+  default_config_hash: 1TQP4b3ZnlzvIH9bj6cpCz_SyUHdJjLQkZnHpikjjhw
+id: cornell_page_title
+theme: cornell
+region: header
+weight: -3
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

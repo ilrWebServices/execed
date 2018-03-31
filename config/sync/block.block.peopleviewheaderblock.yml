@@ -1,0 +1,31 @@
+uuid: 63080d65-a235-43d2-a9a4-5e30dddb117e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:bcd59f25-f3f7-418a-a673-e0c2499eca3e'
+  module:
+    - block_content
+    - system
+  theme:
+    - cornell
+id: peopleviewheaderblock
+theme: cornell
+region: content
+weight: -12
+provider: null
+plugin: 'block_content:bcd59f25-f3f7-418a-a673-e0c2499eca3e'
+settings:
+  id: 'block_content:bcd59f25-f3f7-418a-a673-e0c2499eca3e'
+  label: 'People View Header Block'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /people
+    negate: false
+    context_mapping: {  }

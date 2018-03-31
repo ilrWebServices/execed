@@ -1,0 +1,191 @@
+uuid: bcff34f9-8362-40d6-bb28-387768b68862
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero.field_background_video
+    - field.field.paragraph.hero.field_featured_image_desktop
+    - field.field.paragraph.hero.field_featured_image_mobile
+    - field.field.paragraph.hero.field_headline
+    - field.field.paragraph.hero.field_horizontal_align_desktop
+    - field.field.paragraph.hero.field_horizontal_align_mobile
+    - field.field.paragraph.hero.field_overlay
+    - field.field.paragraph.hero.field_subhead_long
+    - field.field.paragraph.hero.field_text_color
+    - field.field.paragraph.hero.field_vertical_align_desktop
+    - field.field.paragraph.hero.field_vertical_align_mobile
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.hero
+  module:
+    - field_group
+    - svg_image
+    - text
+    - video
+third_party_settings:
+  field_group:
+    group_background:
+      children:
+        - field_featured_image_desktop
+        - field_featured_image_mobile
+        - field_background_video
+        - field_overlay
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: false
+      label: Background
+      region: content
+    group_horizontal_alignment:
+      children:
+        - field_horizontal_align_desktop
+        - field_horizontal_align_mobile
+      parent_name: group_alignment
+      weight: 3
+      format_type: tab
+      format_settings:
+        label: 'Horizontal Alignment'
+        formatter: closed
+        description: ''
+        id: ''
+        classes: ''
+        required_fields: false
+      label: 'Horizontal Alignment'
+      region: content
+    group_text_settings:
+      children:
+        - field_headline
+        - field_subhead_long
+        - field_text_color
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: false
+      label: Text
+      region: content
+    group_alignment:
+      children:
+        - group_horizontal_alignment
+        - group_vertical_alignment
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: false
+      label: Alignment
+      region: content
+    group_vertical_alignment:
+      children:
+        - field_vertical_align_desktop
+        - field_vertical_align_mobile
+      parent_name: group_alignment
+      weight: 4
+      format_type: tab
+      format_settings:
+        label: 'Vertical Alignment'
+        formatter: closed
+        description: ''
+        id: ''
+        classes: ''
+        required_fields: false
+      label: 'Vertical Alignment'
+      region: content
+id: paragraph.hero.default
+targetEntityType: paragraph
+bundle: hero
+mode: default
+content:
+  field_background_video:
+    weight: 14
+    settings:
+      file_extensions: 'mp4 ogv webm'
+      file_directory: 'video-thumbnails/[date:custom:Y]-[date:custom:m]'
+      max_filesize: ''
+      uri_scheme: public
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: video_upload
+    region: content
+  field_featured_image_desktop:
+    weight: 11
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_featured_image_mobile:
+    weight: 12
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_headline:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_horizontal_align_desktop:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_horizontal_align_mobile:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_overlay:
+    weight: 15
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_subhead_long:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_text_color:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_vertical_align_desktop:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_vertical_align_mobile:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

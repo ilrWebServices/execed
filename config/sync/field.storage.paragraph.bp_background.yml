@@ -1,0 +1,41 @@
+uuid: e4453b4a-48de-4c2b-8f48-3970aaf6b01f
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: 214TuOYWLbux-Qyba_KdQAN38qeYwzgKNsy9D0jKGxg
+id: paragraph.bp_background
+field_name: bp_background
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'paragraph--color paragraph--color--rgba-brown-slight'
+      label: 'Brown slight'
+    -
+      value: 'paragraph--color paragraph--color--rgba-brown-light'
+      label: 'Brown light'
+    -
+      value: 'paragraph--color paragraph--color--rgba-brown-strong'
+      label: 'Brown strong'
+    -
+      value: 'paragraph--color paragraph--color--rgba-white-slight'
+      label: 'White slight'
+    -
+      value: 'paragraph--color paragraph--color--rgba-white-light'
+      label: 'White light'
+    -
+      value: 'paragraph--color paragraph--color--rgba-white-strong'
+      label: 'White strong'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

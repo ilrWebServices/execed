@@ -1,0 +1,40 @@
+uuid: 43ae2650-6547-4545-b735-59d96e7504d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tout_content_block
+    - paragraphs.paragraphs_type.image_touts
+    - paragraphs.paragraphs_type.tout_block
+  module:
+    - entity_reference_revisions
+id: paragraph.image_touts.field_tout_content_block
+field_name: field_tout_content_block
+entity_type: paragraph
+bundle: image_touts
+label: 'Content Block'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      tout_block: tout_block
+    target_bundles_drag_drop:
+      hero:
+        weight: 5
+        enabled: false
+      image_touts:
+        weight: 6
+        enabled: false
+      tout_block:
+        enabled: true
+        weight: 7
+      wysiwyg:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

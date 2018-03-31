@@ -1,0 +1,26 @@
+uuid: 67bed19f-fb72-46be-a83d-ddf421d2e1af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_background_video
+    - node.type.landing_page
+  module:
+    - video
+id: node.landing_page.field_background_video
+field_name: field_background_video
+entity_type: node
+bundle: landing_page
+label: 'Background Video'
+description: 'Upload a video here to have a background video behind the page header.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_extensions: ''
+  file_directory: 'videos/[date:custom:Y]-[date:custom:m]'
+  max_filesize: ''
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: video

@@ -1,0 +1,23 @@
+uuid: 0d722632-260a-4eb3-aac2-b92d198f071e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_vertical_align_mobile
+    - paragraphs.paragraphs_type.hero
+  module:
+    - options
+id: paragraph.hero.field_vertical_align_mobile
+field_name: field_vertical_align_mobile
+entity_type: paragraph
+bundle: hero
+label: Mobile
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

@@ -1,0 +1,25 @@
+uuid: ac5e55c3-b5ec-4c09-b128-2672facb1155
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_featured_video
+    - node.type.insights
+  module:
+    - video_embed_field
+id: node.insights.field_featured_video
+field_name: field_featured_video
+entity_type: node
+bundle: insights
+label: 'Featured Video'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_providers:
+    vimeo: vimeo
+    youtube: youtube
+    youtube_playlist: youtube_playlist
+field_type: video_embed_field

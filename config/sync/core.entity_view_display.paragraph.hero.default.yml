@@ -1,0 +1,136 @@
+uuid: 61afa76e-111a-4d17-a275-67bc48015f52
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero.field_background_video
+    - field.field.paragraph.hero.field_featured_image_desktop
+    - field.field.paragraph.hero.field_featured_image_mobile
+    - field.field.paragraph.hero.field_headline
+    - field.field.paragraph.hero.field_horizontal_align_desktop
+    - field.field.paragraph.hero.field_horizontal_align_mobile
+    - field.field.paragraph.hero.field_overlay
+    - field.field.paragraph.hero.field_subhead_long
+    - field.field.paragraph.hero.field_text_color
+    - field.field.paragraph.hero.field_vertical_align_desktop
+    - field.field.paragraph.hero.field_vertical_align_mobile
+    - paragraphs.paragraphs_type.hero
+  module:
+    - options
+    - responsive_bg_image_formatter
+    - text
+    - video
+id: paragraph.hero.default
+targetEntityType: paragraph
+bundle: hero
+mode: default
+content:
+  field_background_video:
+    weight: 11
+    label: above
+    settings:
+      width: '854'
+      height: '480'
+      autoplay: true
+    third_party_settings: {  }
+    type: video_embed_player
+    region: content
+  field_featured_image_desktop:
+    weight: 1
+    label: above
+    settings:
+      image_style: wide
+      css_settings:
+        bg_image_selector: .hero-module__image-desktop
+        bg_image_z_index: auto
+        bg_image_color: '#ffffff'
+        bg_image_x: center
+        bg_image_y: center
+        bg_image_attachment: '0'
+        bg_image_repeat: no-repeat
+        bg_image_background_size: ''
+        bg_image_background_size_ie8: 0
+        bg_image_important: 0
+    third_party_settings: {  }
+    type: responsive_bg_image_formatter
+    region: content
+  field_featured_image_mobile:
+    weight: 0
+    label: above
+    settings:
+      image_style: wide
+      css_settings:
+        bg_image_selector: .hero-module__image-mobile
+        bg_image_z_index: auto
+        bg_image_color: '#ffffff'
+        bg_image_x: center
+        bg_image_y: center
+        bg_image_attachment: '0'
+        bg_image_repeat: '0'
+        bg_image_background_size: ''
+        bg_image_background_size_ie8: 0
+        bg_image_important: 0
+    third_party_settings: {  }
+    type: responsive_bg_image_formatter
+    region: content
+  field_headline:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_horizontal_align_desktop:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_horizontal_align_mobile:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_overlay:
+    weight: 10
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_subhead_long:
+    weight: 12
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_text_color:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_vertical_align_desktop:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_vertical_align_mobile:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden: {  }

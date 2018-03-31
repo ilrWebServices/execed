@@ -1,0 +1,21 @@
+uuid: 217e6c1d-a40c-4a3b-8df5-dc917595ecf1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.tout_block
+  module:
+    - text
+id: paragraph.tout_block.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: tout_block
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

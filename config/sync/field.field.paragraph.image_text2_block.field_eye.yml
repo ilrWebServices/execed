@@ -1,0 +1,19 @@
+uuid: e2ccc59a-70f4-4907-b962-d045a7f0a7e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_eye
+    - paragraphs.paragraphs_type.image_text2_block
+id: paragraph.image_text2_block.field_eye
+field_name: field_eye
+entity_type: paragraph
+bundle: image_text2_block
+label: Eyebrow
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

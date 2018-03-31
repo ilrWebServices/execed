@@ -1,0 +1,18 @@
+uuid: be2be988-62c8-4f0f-b00c-7be1a708829a
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_add_top_line
+field_name: field_add_top_line
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

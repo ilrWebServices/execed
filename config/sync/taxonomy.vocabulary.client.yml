@@ -1,0 +1,9 @@
+uuid: cea7805a-a6a5-45aa-a723-24a400170a86
+langcode: en
+status: true
+dependencies: {  }
+name: Client
+vid: client
+description: ''
+hierarchy: 0
+weight: 0

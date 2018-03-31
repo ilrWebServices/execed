@@ -1,0 +1,20 @@
+uuid: 9161f83d-3d0d-44cf-937f-4ecc0dad3236
+langcode: en
+status: true
+dependencies:
+  module:
+    - we_megamenu
+  theme:
+    - bootstrap
+id: tools
+theme: bootstrap
+region: sidebar_second
+weight: -6
+provider: null
+plugin: 'we_megamenu_block:tools'
+settings:
+  id: 'we_megamenu_block:tools'
+  label: Tools
+  provider: we_megamenu
+  label_display: '0'
+visibility: {  }

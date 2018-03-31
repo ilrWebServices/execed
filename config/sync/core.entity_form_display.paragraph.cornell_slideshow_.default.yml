@@ -1,0 +1,82 @@
+uuid: 45c853a5-b4f4-451e-a25b-c00170e5e62a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cornell_slideshow_.field_citation
+    - field.field.paragraph.cornell_slideshow_.field_headline_ss
+    - field.field.paragraph.cornell_slideshow_.field_image_ss
+    - field.field.paragraph.cornell_slideshow_.field_link_ss
+    - field.field.paragraph.cornell_slideshow_.field_logo
+    - field.field.paragraph.cornell_slideshow_.field_quote
+    - field.field.paragraph.cornell_slideshow_.field_subhead
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.cornell_slideshow_
+  module:
+    - link
+    - svg_image
+id: paragraph.cornell_slideshow_.default
+targetEntityType: paragraph
+bundle: cornell_slideshow_
+mode: default
+content:
+  field_citation:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_headline_ss:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_image_ss:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_link_ss:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_logo:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_quote:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_subhead:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

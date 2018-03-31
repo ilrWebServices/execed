@@ -1,0 +1,19 @@
+uuid: 12754423-d5a4-4fde-ab18-d38890136aec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_headline_imgtxtblock
+    - paragraphs.paragraphs_type.image_text2_block
+id: paragraph.image_text2_block.field_headline_imgtxtblock
+field_name: field_headline_imgtxtblock
+entity_type: paragraph
+bundle: image_text2_block
+label: Headline
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
