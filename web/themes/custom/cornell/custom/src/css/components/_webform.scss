@@ -1,0 +1,125 @@
+.form-container {
+  position: relative;
+  background: $secondary--light;
+  margin: 3rem 0;
+  padding: 3rem 0;
+  @media screen and (min-width: $break-med) {
+    margin: 6rem 0;
+    padding: 6rem 0;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    @include full-widthify;
+    height: 100%;
+    background-color: inherit;
+  }
+}
+
+.form-inner {
+  margin: 0px auto;
+  max-width: 1000px;
+  width: 80%;
+  @media screen and (min-width: $break-lg) {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+.form-headline {
+  font-family: $font-body;
+  font-size: 23px;
+  font-weight: 700;
+  margin: 0 0 25px 0;
+  max-width: 415px;
+  width: 70%;
+  @media (min-width: $break-med) {
+    width: 96%;
+  }
+}
+
+.js-webform {
+  @media screen and (min-width: $break-lg) {
+    width: 55%;
+  }
+
+  .field--label {
+    display: none;
+  }
+}
+
+// form control styles
+.js-webform .webform-submission-form {
+  font-family: $font-body;
+  margin: 0 0 55px 0;
+  max-width: 415px;
+  width: 100%;
+  @media screen and (min-width: $break-lg) {
+    max-width: 450px;
+    margin: 0;
+  }
+  .control-label {
+    font-size: 1rem;
+  }
+  .form-control {
+    border: 1px solid $dark;
+    @media screen and (min-width: $break-lg) {
+      width: 100%;
+    }
+  }
+  input.form-control {
+    height: 43px;
+    margin: 5px 0 15px 0;
+    padding: 0;
+    text-indent: 15px;
+  }
+  textarea.form-control {
+    height: 150px;
+    margin: 5px 0 15px 0;
+    padding: 10px 0 0 15px;
+    resize: none;
+  }
+}
+
+// form error styles
+.js-webform .webform-submission-form {
+  input,
+  textarea {
+    transition: border-bottom 500ms;
+    &.invalid {
+      border-bottom: 4px solid $primary;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  .form-item .error-message {
+    color: $primary;
+    position: relative;
+      top: -10px;
+  }
+}
+
+.img-container {
+  align-self: center;
+  max-width: 375px;
+  width: 100%;
+  @media screen and (min-width: $break-lg) {
+    max-width: none;
+    width: 45%;
+  }
+}
+
+.form-img {
+  margin: 0 auto;
+  width: 80%;
+  @media screen and (min-width: $break-lg) {
+    width: 100%;
+  }
+  img {
+    max-width: 100%;
+  }
+}

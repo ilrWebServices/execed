@@ -1,0 +1,52 @@
+@import 'person/sidebar';
+@import 'person/insights';
+
+.person {
+    font-size: 1.25rem;
+    display: flex;
+
+    .rte {
+        font-size: inherit;
+
+        p {
+            font-size: inherit;
+
+            &:first-of-type {
+                margin-top: 0;
+            }
+        }
+
+        h3, h4, h5, h6 {
+            font-family: $font-headline;
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: $dark;
+            line-height: .95;
+            margin: 0 0 2rem 0;
+        }
+    }
+
+    &__content {
+        flex-grow: 1;
+        margin-right: 2rem;
+    }
+
+    &__sidebar-heading {
+        font-family: $font-headline;
+        font-size: 1.25rem;
+        font-weight: 400;
+        color: $dark;
+        line-height: .95;
+        margin: 0 0 2rem 0;
+    }
+}
+
+@media screen and (max-width: $break-lg) {
+    .person {
+        flex-direction: column;
+
+        &__content {
+            margin-right: 0;
+        }
+    }
+}

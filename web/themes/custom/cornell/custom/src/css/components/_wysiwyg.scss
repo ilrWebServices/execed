@@ -1,0 +1,33 @@
+.wysiwyg {
+    $parent: &;
+
+    position: relative;
+    margin: 6rem 0;
+
+    &.tan {
+        padding: 4rem 0;
+    }
+
+    &__background {
+        &--tan {
+            @include overlay;
+            @include full-widthify;
+            background-color: $secondary;
+        }
+    }
+}
+
+@media screen and (max-width: $break-lg) {
+    .wysiwyg {
+
+        &.tan {
+            padding: 2rem 0;
+        }
+    }
+}
+
+@media screen and (max-width: $break-meds) {
+    .wysiwyg {
+        margin: 3rem 0;
+    }
+}

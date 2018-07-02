@@ -1,0 +1,241 @@
+/* table {
+  display: none;
+} */
+.carousel-gallery {
+  @include full-widthify;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+
+  @media screen and (max-width: $break-meds) {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+.carousel-headline {
+  font-family: $font-headline;
+  font-size: 54px;
+  margin: 0 0 40px 10%;
+  width: 30%;
+  @media screen and (min-width: $break-meds) {
+    font-size: 108px;
+    position: relative;
+    top: 76px;
+  }
+  @media screen and (min-width: $break-xl) {
+    font-size: 132px;
+    top: 88px;
+  }
+}
+
+.slideshow-container {
+  @media screen and (min-width: $break-meds) {
+    background: $secondary--light;
+    margin: 0 0 130px;
+  }
+  
+  button {
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.slideshow {
+  margin: 0;
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+  @media screen and (min-width: $break-meds) {
+    position: relative;
+    top: 100px;
+  }
+
+  &-track {
+    align-items: center;
+    display: flex;
+    margin: 0;
+    width: 100%;
+    @media screen and (min-width: $break-meds) {
+      width: 80%;
+      margin: 0 10%;
+    }
+  }
+}
+.slide {
+  flex-shrink: 0;
+  margin: 0;
+  position: relative;
+  width: 100%;
+  @media screen and (min-width: $break-meds) {
+    margin: 0 3%;
+    width: 94%;
+  }
+}
+.slide-img {
+  @media screen and (min-width: $break-xl) {
+    width: 100%;
+  }
+  img {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+.slide-content {
+  background: $primary--light-transparent;
+  color: $light--light;
+  font-family: $font-body;
+  padding: 50px 0 0;
+  position: relative;
+  top: -95px;
+  @media screen and (min-width: $break-xl) {
+    padding: 40px 0 0;
+    position: absolute;
+      top: 50%;
+      right: 5%;
+    transform: translate(0, -50%);
+    width: 60%;
+  }
+
+  .content-inner {
+    margin: 0 0 0 10%;
+    width: 90%;
+  }
+}
+.content-header {
+  .content-inner {
+    border-top: 2px solid $light--light;
+    padding: 12px 0 0;
+    @media screen and (min-width: 560px) {
+      margin: 0 auto;
+    }
+  }
+  .eyebrow {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+}
+.content-body {
+  background: $primary--light;
+  padding: 26px 0 60px;
+  @media screen and (min-width: $break-xl) {
+    background: none;
+    padding: 26px 0 40px;
+  }
+  .content-inner {
+    @media screen and (min-width: 560px) {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      margin: 0 auto;
+    }
+  }
+  .logo {
+    margin: 0 0 30px 0;
+    @media screen and (min-width: 560px) {
+      width: 30%;
+      margin: 0 5% 0 0;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+  .main-content {
+    width: 65%;
+    margin: 0 0 60px 0;
+  }
+  .headline {
+    font-family: $font-headline;
+    font-size: 1.8rem;
+    font-weight: 200;
+    margin: 0 0 30px;
+  }
+  .sub-headline {
+    font-size: 1.2rem;
+    margin: 0 0 30px;
+  }
+  .slide-cta {
+    @include main-cta($light--light, $dark);
+    display: inline-block;
+  }
+  .quote-content {
+    @media screen and (min-width: 560px) {
+      border-top: 2px solid $light--light;
+      flex: 1 100%;
+      padding: 30px 0 0;
+    }
+  }
+  .quote {
+    border: none;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.3;
+    margin: 0 0 15px;
+    padding: 0;
+    width: 80%;
+  }
+  cite {
+    display: block;
+    font-style: normal;
+    width: 60%;
+  }
+}
+.nav-arrows {
+  button {
+    background: $light--light;
+    border: 2px solid $dark;
+    box-shadow: 0 0 0 6px $light--light;
+    border-radius: 50%;
+    height: 32px;
+    position: absolute;
+      top: 48vw;
+    text-align: center;
+    width: 32px;
+    color: $primary--light;
+    font-size: 1.5rem;
+    padding-top: .25rem;
+    @media screen and (min-width: $break-meds) {
+      box-shadow: 0 0 0 10px $light--light;
+      height: 46px;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 46px;
+    }
+  }
+  .next-btn {
+    right: 6%;
+  }
+  .prev-btn {
+    left: 6%;
+  }
+}
+.nav-dots {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 66px;
+  @media screen and (min-width: 560px) {
+    justify-content: flex-start;
+    margin: 0 auto 0;
+    width: 76%;    
+  }
+  @media screen and (min-width: $break-xl) {
+    bottom: 0px;
+    margin: 0 auto 50px;
+  }
+
+  button {
+    background: #e2e2e2;
+    border-radius: 50%;
+    height: 22px;
+    margin: 0 14px 0 0;
+    padding: 0;
+    width: 22px;
+    &:last-child {
+      margin: 0;
+    }
+    &.active-dot {
+      background: $primary--light;
+    }
+  }
+}
+

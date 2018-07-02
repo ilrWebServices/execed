@@ -1,0 +1,108 @@
+.insights-grid {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+
+    &__column {
+        width: calc((100% - 4rem) / 3);
+    }
+
+    &__item {
+        background-color: $secondary--light;
+        display: flex;
+        flex-direction: column;
+
+        &:not(:last-of-type) {
+            margin-bottom: 2rem;
+        }
+    }
+    
+    &__image {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+
+        &::before {
+            content: '';
+            display: block;
+            height: 0;
+            padding-bottom: 66.67%;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $dark;
+            transition: opacity $easing--regular;
+            opacity: 0;
+        }
+
+        &:hover {
+            &::after {
+                opacity: .2;
+            }
+        }
+    }
+    
+    &__item-content {
+        padding: 2rem;
+    }
+
+    &__divider {
+        width: 100%;
+        border-color: $primary--light;
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+
+    &__topic {
+        font-family: $font-headline;
+        font-size: 1.375rem;
+        color: $dark;
+        margin-bottom: .75rem;
+    }
+
+    &__title {
+        font-family: $font-body;
+        font-weight: 700;
+        font-size: 2rem;
+        color: $dark;
+        line-height: 1.125;
+        margin: 0;
+        margin-bottom: .75rem;
+    }
+
+    &__body {
+        font-size: 1.125rem;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    &__cta {
+        @include link;
+        font-size: 1.125rem;
+    }
+}
+
+@media screen and (max-width: $break-meds) {
+    .insights-grid {
+        flex-direction: column;
+
+        &__column {
+            @include full-widthify;
+        }
+
+        &__item {
+            margin-bottom: 1.5em;
+
+            &:not(:last-of-type) {
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+}

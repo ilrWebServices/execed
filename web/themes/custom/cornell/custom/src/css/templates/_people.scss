@@ -1,0 +1,9 @@
+@import 'people/grid';
+
+.people {
+}
+
+@media screen and (max-width: $break-meds) {
+    .people {
+    }
+}

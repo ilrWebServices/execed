@@ -1,0 +1,61 @@
+{#
+/**
+ * @file
+ * Default theme implementation for main view template.
+ *
+ * Available variables:
+ * - attributes: Remaining HTML attributes for the element.
+ * - css_name: A css-safe version of the view name.
+ * - css_class: The user-specified classes names, if any.
+ * - header: The optional header.
+ * - footer: The optional footer.
+ * - rows: The results of the view query, if any.
+ * - empty: The content to display if there are no rows.
+ * - pager: The optional pager next/prev links to display.
+ * - exposed: Exposed widget form/info to display.
+ * - feed_icons: Optional feed icons to display.
+ * - more: An optional link to the next page of results.
+ * - title: Title of the view, only used when displaying in the admin preview.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the view title.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the view title.
+ * - attachment_before: An optional attachment view to be displayed before the
+ *   view content.
+ * - attachment_after: An optional attachment view to be displayed after the
+ *   view content.
+ * - dom_id: Unique id for every view being printed to give unique class for
+ *   JavaScript.
+ *
+ * @ingroup templates
+ *
+ * @see template_preprocess_views_view()
+ */
+#}
+{% if rows %}
+    {% for index, row in rows.0['#rows'] %}
+        {% set item = rows.0['#view'].result[index]._entity %}
+        <div class="person-insights__item insights-grid__item-content">
+            <hr class="insights-grid__divider" aria-hidden="true">
+            {% if item.field_insight_topics %}
+                <p class="insights-grid__topic">
+                    {% for topic in item.field_insight_topics %}
+                        {{ topic.entity.name.value }}{{ loop.last ? '' : ',' }}
+                    {% endfor %}
+                </p>
+            {% endif %}
+            {% if item.title %}
+                <h2 class="insights-grid__title">{{ item.title.value }}</h2>
+            {% endif %}
+
+            <div class="insights-grid__body rte">
+                {% set body = item.body.value|striptags|trim %}
+                {{ (body|length > 200 ? body|slice(0, 201)|split(' ')|slice(0, -1)|join(' ') ~ '…' : body)|raw }}
+            </div>
+            
+            <a class="insights-grid__cta" href="{{ path('entity.node.canonical', { 'node': item.nid.value }) }}">Read More</a>
+        </div>
+    {% endfor %}
+{% elseif empty %}
+    {{ empty }}
+{% endif %}

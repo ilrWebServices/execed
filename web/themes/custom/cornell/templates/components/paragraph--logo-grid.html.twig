@@ -40,8 +40,14 @@
 #}
 
 {% block paragraph %}
-    <h2 class="">{{ content.field_header['#items'].0.value }}</h2>
-    {% for logo in content.field_logos['#items'] %}
-        <img src="{{ file_url(logo.entity.fileuri) }}" alt="{{ logo.alt }}">
-    {% endfor %}
+    <div class="logo-grid">
+        <h2 class="logo-grid__heading">{{ content.field_header['#items'].0.value }}</h2>
+        <div class="logo-grid__wrap">
+            {% for logo in content.field_logos['#items'] %}
+            <div class="logo-grid__logo">
+                <img src="{{ file_url(logo.entity.fileuri) }}" alt="{{ logo.alt }}">
+            </div>
+            {% endfor %}
+        </div>
+    </div>
 {% endblock paragraph %}

@@ -38,22 +38,38 @@
  * @ingroup themeable
  */
 #}
-{% set parent_class = 'content-block-module' %}
-{%
-  set classes = [
-    parent_class
-  ]
-%}
-{% block paragraph %}
-  <div{{ attributes.addClass(classes) }}>
-    {{ content.field_image }}
-    <h3 class="{{ parent_class }}__heading">
-      {{ content.field_headline}}
-    </h3>
 
-    <div class="{{ parent_class }}__subheading">
-      {{ content.field_subhead }}
+{% block paragraph %}
+  <div class="text-block">
+    <div class="text-top">
+      {% if content.field_image|render %}
+        {{ content.field_image }}
+      {% endif %}
+
+      {% if content.field_topline|render %}
+        <div class="topline">{{ content.field_topline }}</div>
+      {% endif %}
+
+      {% if content.field_headline|render %}
+        <h3 class="headline">{{ content.field_headline }}</h3>
+      {% endif %}
+
+      {% if content.field_subline|render %}
+        <div class="subline">{{ content.field_subline }}</div>
+      {% endif %}
     </div>
-    {{ content.field_link }}
+
+    {% if content.field_description|render %}
+      <div class="description">
+        {{ content.field_description }}
+      </div>
+    {% endif %}
+    
+    {% if content.field_link['#items'].0.title %}
+      <a href="{{ content.field_link[0]['#url'] }}" class="text-block__cta">{{ content.field_link['#items'].0.title }}</a>
+    {% endif %}
+    
   </div>
 {% endblock paragraph %}
+
+

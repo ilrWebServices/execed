@@ -8,8 +8,10 @@
 // global items
 @import 'global/base';
 @import 'global/main';
-@import 'global/type';
+@import 'global/link';
+@import 'global/rte';
 @import 'global/alignment';
+@import 'global/lines';
 @import 'global/text-color';
 @import 'global/buttons';
 @import 'global/forms';
@@ -21,6 +23,19 @@
 // components
 @import 'components/hero';
 @import 'components/basic-hero';
+@import 'components/view-hero';
+@import 'components/squares';
+@import 'components/logo-grid';
+@import 'components/bp-tabs';
+@import 'components/webform';
+@import 'components/text-blocks';
+@import 'components/image-text-block';
+@import 'components/carousel-gallery';
+@import 'components/content-grid';
+@import 'components/wysiwyg';
 
 // page templates
-// @import 'templates/_page';
+@import 'templates/insights';
+@import 'templates/people';
+@import 'templates/person';
+@import 'templates/view';

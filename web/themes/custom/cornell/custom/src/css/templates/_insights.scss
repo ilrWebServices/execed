@@ -1,0 +1,59 @@
+@import 'insights/grid';
+@import 'insights/sidebar';
+@import 'insights/more';
+
+.insights {
+    font-size: 1.25rem;
+    display: flex;
+
+    .rte {
+        font-size: inherit;
+
+        p {
+            font-size: inherit;
+
+            &:first-of-type {
+                margin-top: 0;
+            }
+        }
+
+        h3, h4, h5, h6 {
+            font-family: $font-headline;
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: $dark;
+            line-height: .95;
+            margin: 2rem 0;
+        }
+    }
+
+    &__content {
+        flex-grow: 1;
+        margin-right: 2rem;
+    }
+
+    &__more {
+        
+    }
+
+    &__heading {
+        font-family: $font-headline;
+        font-size: 1.25rem;
+        font-weight: 400;
+        color: $dark;
+        line-height: .95;
+        margin: 0 0 1rem 0;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: $break-lg) {
+    .insights {
+        flex-direction: column;
+
+        &__content {
+            margin-right: 0;
+        }
+    }
+}
+

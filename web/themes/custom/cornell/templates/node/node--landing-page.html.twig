@@ -90,9 +90,11 @@
 			{{ content.body }}
 		</div>
     </div>
+
+	{% include '@cornell/includes/squares.html.twig' with { 'lower_left': random([2,3]), 'upper_right': 4 } %}
 </header>
 <article{{ attributes.addClass(classes) }}>
-	{{ title_prefix }}
+{# 	{{ title_prefix }}
 	{% if not page %}
 		<h2{{ title_attributes }}>
 			<a href="{{ url }}" rel="bookmark">{{ label }}</a>
@@ -108,10 +110,10 @@
 				{{ metadata }}
 			</div>
 		</footer>
-	{% endif %}
+	{% endif %} #}
 
 	<div{{ content_attributes.addClass('content') }}>
-		{{ content|without('field_subhead', 'body', 'field_featured_image_landingpage', 'field_background_video') }}
+		{{ content|without('field_subhead', 'body', 'field_featured_image_landingpage', 'field_background_video', 'field_program_landingpage') }}
 	</div>
 
 </article>

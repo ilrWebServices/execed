@@ -72,17 +72,16 @@
 		node.isSticky() ? 'is-sticky',
 		not node.isPublished() ? 'is-unpublished',
 		view_mode ? view_mode|clean_class,
-		'clearfix',
 	]
 %}
 <header class="basic-hero">
 	<h1 class="basic-hero__heading">{{ label }}</h1>
 	<p class="basic-hero__subheading rte">
-		{{ content.field_person_subhead }}
+		{{ content.field_person_subhead['#items'].0.value|striptags()|trim }}
 	</p>
 </header>
 <article{{ attributes.addClass(classes) }}>
-	{{ title_prefix }}
+{# 	{{ title_prefix }}
 	{% if not page %}
 		<h2{{ title_attributes }}>
 			<a href="{{ url }}" rel="bookmark">{{ label }}</a>
@@ -98,7 +97,7 @@
 				{{ metadata }}
 			</div>
 		</footer>
-	{% endif %}
+	{% endif %} #}
 
 	<div{{ content_attributes.addClass('content') }}>
 		{{ content|without('field_person_subhead') }}

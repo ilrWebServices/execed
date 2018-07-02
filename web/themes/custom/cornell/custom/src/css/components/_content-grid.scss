@@ -1,0 +1,91 @@
+.content-grid-wrap {
+  box-sizing: border-box;
+  margin: 6rem auto;
+  width: 90%;
+
+  @media screen and (max-width: $break-meds) {
+    margin: 3rem auto;
+    width: 100%;
+  }
+
+  &--headline {
+    font-family: $font-headline;
+    font-size: 46px;
+    margin: 0 0 22px;
+    @media screen and (min-width: $break-xs) {
+      font-size: 56px;
+    }
+    @media screen and (min-width: $break-meds) {
+      font-size: 60px;
+      width: 50%;
+    }
+    @media screen and (min-width: $break-lg) {
+      font-size: 106px;
+    }
+  }
+  &--subhead {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+  }
+}
+
+.content-grid {
+  @media screen and (min-width: $break-meds) {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    margin: 50px 0 0;
+  }
+}
+
+.content-block {
+  border-bottom: 2px solid $dark;
+  padding: 3rem 0;
+  @media screen and (min-width: $break-meds) {
+    border-right: 2px solid $dark;
+    border-bottom: none;
+    flex-basis: 49%;
+    margin: 0 0 40px;
+    padding: 30px 4% 60px;
+    &:nth-child(even) {
+      border-right: none;
+    }
+  }
+  @media screen and (min-width: $break-lg) {
+    flex-basis: 33.333333%;
+    &:nth-child(even) {
+      border-right: 2px solid $dark;
+    }
+    &:nth-child(3n) {
+      border-right: none;
+    }
+  }
+
+  &--headline {
+    font-family: $font-headline;
+    font-size: 38px;
+    margin: 0 0 24px;
+    @media screen and (min-width: $break-meds) {
+      font-size: 42px;
+    }
+  }
+  &--subhead {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 24px;
+  }
+  &--body {
+    margin: 0 0 34px;
+  }
+  &--example {
+    border-top: 2px solid $primary--light;
+    font-size: 24px;
+    margin: 0 0 36px;
+    padding: 28px 0 0;
+  }
+  &--cta {
+    @include main-cta;
+    display: inline-block;
+  }
+}

@@ -1,0 +1,11 @@
+<header class="view-hero">
+	<h1 class="view-hero__heading">{{ drupal_title() }}</h1>
+	<div class="view-hero__subheading">
+        {% block content %}
+            {% for item in content.body['#items'] %}
+                {{ item.value|raw }}
+            {% endfor %}
+        {% endblock %}
+	</div>
+    <hr class="view-hero__divider">
+</header>

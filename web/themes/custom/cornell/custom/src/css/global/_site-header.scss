@@ -128,6 +128,10 @@ $mobile-nav-height: 80px;
             margin-bottom: 2rem;
         }
 
+        &__logo-image {
+            width: 11.25rem;
+        }
+
         &__hamburger {
             display: none;
         }
@@ -146,6 +150,10 @@ $mobile-nav-height: 80px;
 
 // 960-
 @media screen and (max-width: $break-lg) {
+    .content-wrapper {
+        padding-top: $mobile-nav-height;
+    }
+
     .site-header {
         $parent: &;
         position: fixed;
@@ -172,6 +180,10 @@ $mobile-nav-height: 80px;
 
         &__logo-link {
             display: flex;
+        }
+
+        &__logo-image {
+            height: $mobile-nav-height - 16px;
         }
 
         &__hamburger {

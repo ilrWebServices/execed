@@ -2,13 +2,15 @@
     $parent: &;
 
     position: relative;
-    @include full-widthify;
-    min-height: 60vh;
-    padding: 4rem;
+    left: -4rem;
+    width: calc(100% + 8rem);
+    min-height: 70vh;
+    padding: 10% 20%;
     display: flex;
 
     &__background {
         @include overlay();
+        @include full-widthify;
         overflow: hidden;
         background-color: $dark;
         background-size: cover;
@@ -50,12 +52,12 @@
 
     &__subheading {
         @include h6;
-        max-width: 66%;
+        max-width: 80%;
         text-align: center;
     }
 
     &__body {
-        max-width: 50%;
+        max-width: 60%;
         text-align: center;
     }
 }
@@ -63,6 +65,8 @@
 @media screen and (max-width: $break-meds) {
     .page-hero {
         padding: 2rem;
+        left: -2rem;
+        width: calc(100% + 4rem);
         
         &__subheading {
             max-width: 100%;

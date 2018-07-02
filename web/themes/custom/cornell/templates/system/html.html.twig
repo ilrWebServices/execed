@@ -58,8 +58,9 @@
 <html {{ html_attributes }}>
   <head>
     <head-placeholder token="{{ placeholder_token|raw }}">
+    <meta name="google-site-verification" content="ZjcvDRvmdfXtB9fVx-B_o6ojoYrfrW3lRy31o6x4pCs" />
     <title>{{ head_title|safe_join(' | ') }}</title>
-    <link rel="stylesheet" href="https://use.typekit.net/doa7ssw.css">
+    <link rel="stylesheet" href="https://use.typekit.net/tcm4ent.css">
     <css-placeholder token="{{ placeholder_token|raw }}">
     <js-placeholder token="{{ placeholder_token|raw }}">
   </head>
@@ -83,12 +84,29 @@
               <path d="M13.35 13.735l5.92 5.445" stroke-linecap="round"/>
           </g>
         </symbol>
+
+        <symbol id="linkedin-icon" viewBox="0 0 21 20">
+          <title>linkedin icon</title>
+          <g fill="#222" fill-rule="evenodd">
+              <path d="M0 20h5V6H0zM4.31.708C3.86.236 3.261 0 2.513 0 1.766 0 1.16.236.696.708.232 1.182 0 1.78 0 2.5c0 .712.225 1.306.675 1.784C1.126 4.761 1.721 5 2.46 5h.026c.757 0 1.368-.239 1.831-.716.465-.478.692-1.072.683-1.784-.009-.721-.239-1.318-.69-1.792zM19.551 7.568C18.586 6.523 17.308 6 15.721 6c-.586 0-1.118.072-1.596.214a3.639 3.639 0 0 0-1.211.6c-.33.259-.592.498-.788.72-.195.22-.385.477-.571.772h.028V6.318H7l.014.663c.01.442.014 1.803.014 4.087 0 2.282-.01 5.26-.028 8.932h4.583v-7.635c0-.47.051-.842.153-1.118.195-.47.49-.863.885-1.18.394-.319.885-.477 1.47-.477.798 0 1.386.274 1.762.821.375.548.564 1.305.564 2.272V20H21v-7.842c0-2.016-.483-3.546-1.449-4.59z"/>
+          </g>
+        </symbol>
+
+        <symbol id="twitter-icon" viewBox="0 0 21 18">
+          <title>Twitter Icon</title>
+          <path d="M18.526 2.846A4.51 4.51 0 0 0 20.42.333a8.355 8.355 0 0 1-2.736 1.102A4.194 4.194 0 0 0 14.539 0c-2.38 0-4.307 2.035-4.307 4.544 0 .356.036.703.11 1.034-3.58-.19-6.754-1.996-8.88-4.747a4.724 4.724 0 0 0-.583 2.285c0 1.576.76 2.967 1.917 3.783a4.154 4.154 0 0 1-1.953-.568v.056c0 2.202 1.484 4.04 3.458 4.455a4.01 4.01 0 0 1-1.137.16c-.277 0-.548-.027-.81-.08.548 1.804 2.139 3.12 4.025 3.155-1.476 1.219-3.333 1.944-5.351 1.944-.348 0-.691-.02-1.028-.062A11.747 11.747 0 0 0 6.604 18c7.926 0 12.257-6.924 12.257-12.929 0-.197-.002-.394-.01-.587A9.006 9.006 0 0 0 21 2.13a8.257 8.257 0 0 1-2.474.715z" fill="#222" fill-rule="evenodd"/>
+        </symbol>
+
+        <symbol id="facebook-icon" viewBox="0 0 11 23">
+          <title>Facebook Icon</title>
+          <path d="M7.315 23H2.437V11.499H0V7.536h2.437v-2.38C2.437 1.923 3.813 0 7.723 0h3.255v3.964H8.944c-1.523 0-1.623.554-1.623 1.588l-.007 1.984H11l-.431 3.963H7.314V23z" fill="#222" fill-rule="evenodd"/>
+        </symbol>
     </svg>
     {% include '@cornell/includes/site-navigation.html.twig' %}
     {{ page_top }}
     {{ page }}
     {{ page_bottom }}
-    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,WebAnimations"></script>
     <js-bottom-placeholder token="{{ placeholder_token|raw }}">
   </body>
 </html>

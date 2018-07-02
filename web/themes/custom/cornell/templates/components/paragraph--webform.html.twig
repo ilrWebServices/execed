@@ -40,14 +40,18 @@
 #}
 
 {% block paragraph %}
-    <section>
-        <div>
-            <h2 class="">{{ content.field_headl['#items'].0.value }}</h2>
-            {{ content.field_webform }}
+    <div class="form-container">
+        <div class="form-inner">
+            <div class="js-webform">
+                <h2 class="form-headline">{{ content.field_headl['#items'].0.value }}</h2>
+                {{ content.field_webform }}
+            </div>
+            <div class="img-container">
+                <div class="form-img">
+                    {% set image = content.field_image_webform['#items'].0 %}
+                    <img src="{{ file_url(image.entity.fileuri) }}" alt="{{ image.alt }}">
+                </div>
+            </div>
         </div>
-        <div>
-            {% set image = content.field_image_webform['#items'].0 %}
-            <img src="{{ file_url(image.entity.fileuri) }}" alt="{{ image.alt }}">
-        </div>
-    </section>
+    </div>
 {% endblock paragraph %}

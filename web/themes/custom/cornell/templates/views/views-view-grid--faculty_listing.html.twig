@@ -1,0 +1,71 @@
+{#
+/**
+ * @file
+ * Default theme implementation for views to display rows in a grid.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapping element.
+ * - title: The title of this group of rows.
+ * - view: The view object.
+ * - rows: The rendered view results.
+ * - options: The view plugin style options.
+ *   - row_class_default: A flag indicating whether default classes should be
+ *     used on rows.
+ *   - col_class_default: A flag indicating whether default classes should be
+ *     used on columns.
+ * - items: A list of grid items. Each item contains a list of rows or columns.
+ *   The order in what comes first (row or column) depends on which alignment
+ *   type is chosen (horizontal or vertical).
+ *   - attributes: HTML attributes for each row or column.
+ *   - content: A list of columns or rows. Each row or column contains:
+ *     - attributes: HTML attributes for each row or column.
+ *     - content: The row or column contents.
+ *
+ * @see template_preprocess_views_view_grid()
+ *
+ * @ingroup themeable
+ */
+#}
+{% if title %}
+	<h3>{{ title }}</h3>
+{% endif %}
+
+<section class="people-grid">
+	{% for index, item in rows %}
+        {% set item = item['#view'].result[index]._entity %}
+        <a href="{{ path('entity.node.canonical', { 'node': item.nid.value }) }}" class="people-grid__item">
+            {% if item.field_person_image %}
+                <span class="people-grid__image" style="background-image: url({{ file_url(item.field_person_image.0.entity.fileuri) }})">
+                    <span class="visually-hidden">{{ item.field_person_image.0.alt }}</span>
+                </span>
+            {% endif %}
+            
+            <span class="people-grid__item-content">
+                {% if item.field_person_prefix or item.field_person_first_name or item.field_person_last_name or item.field_person_suffix %}
+                    <h2 class="people-grid__name">
+                        {{ item.field_person_prefix.value }} {{ item.field_person_first_name.value }} {{ item.field_person_last_name.value }} {{ item.field_person_suffix.value }}
+                    </h2>
+                {% endif %}
+
+                {% if item.field_person_designation %}
+                    <h3 class="people-grid__title">
+                        {{ item.field_person_designation.value }}
+                    </h3>
+                {% endif %}
+                
+                {% if item.field_phone %}
+                    <p class="people-grid__info">
+                        {{ item.field_phone.value }}
+                    </p>
+                {% endif %}
+
+                {% if item.field_person_email %}
+                    <p class="people-grid__info">
+                        {{ item.field_person_email.value }}
+                    </p>
+                {% endif %}
+            </span>
+        </a>
+    {% endfor %}
+</section>
+

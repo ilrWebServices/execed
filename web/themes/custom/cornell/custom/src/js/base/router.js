@@ -12,6 +12,13 @@ CRN.router = (function(CRN, $) {
 	function init() {
 		initNav();
 		CRN.chatBubble.init();
+		CRN.tabToggle.init();
+		CRN.formValidation.init();
+		CRN.slideShow.init();
+
+		if (document.querySelector('.box')) {
+			const rellax = new Rellax('.box');
+		}
 	}
 
 	return {

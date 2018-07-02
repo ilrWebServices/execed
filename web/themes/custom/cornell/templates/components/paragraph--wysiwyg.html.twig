@@ -40,7 +40,8 @@
 #}
 
 {% block paragraph %}
-    <section class="rte">
+    <section class="wysiwyg rte {{ content.field_background_color['#items'].0.value }}">
+        <span class="wysiwyg__background--{{ content.field_background_color['#items'].0.value }}"></span>
         {{ content.field_body }}
     </section>
 {% endblock paragraph %}

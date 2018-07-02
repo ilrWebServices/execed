@@ -24,21 +24,80 @@
     }
 
     p {
-        @include body-copy;
+        @include body-copy(inherit);
+        margin: 1rem 0;
+    }
+
+    ul, ol {
+        display: table;
+        margin: 1rem 0;
+        margin-left: 0;
+        padding-left: 0;
+        list-style: none;
+        padding-left: 0;
+    }
+
+    ul {
+        li {
+            &::before {
+                content: "•";
+            }
+        }
+    }
+
+    ol {
+        counter-reset: table-ol;
+
+        li {
+            counter-increment: table-ol;
+
+            &::before {
+                content: counter(table-ol) ".";
+            }
+        }
     }
 
     li {
-        @include body-copy;
+        @include body-copy(inherit);
+        display: table-row;
+
+        &::before {
+            display: table-cell;
+            padding-right: 1rem;
+            text-align: right;
+        }
+
+        &:not(:last-of-type) {
+            padding-bottom: .5rem;
+
+            p {
+                padding-bottom: .5rem;
+            }
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+
+    blockquote {
+        @include body-copy(inherit);
+        margin: 2rem 0;
+        margin-left: calc(-2rem - 2px);
+        padding: 1rem 2rem;
+        border-left: 2px solid $primary--light;
     }
 
     a {
-        color: $primary;
-        text-decoration: underline;
-        transition: color $easing--regular;
+        @include link;
+    }
 
-        &:hover {
-            color: inherit;
-        }
+    figure {
+        margin: 2rem 0;
+    }
+
+    figcaption {
+        font-size: 1rem;
     }
 
     img {

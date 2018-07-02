@@ -1,23 +1,26 @@
-@mixin main-cta {
+@mixin main-cta($background: $primary--light, $text: $light--light) {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: .7rem 1.5rem .75rem 1.5rem;
     margin: 0;
     margin-top: 1rem;
-    background-color: $primary--light;
+    background-color: $background;
     appearance: none;
     border: 0;
     border-radius: 0;
     font-family: $font-body;
     font-size: 1.25rem;
     font-weight: 700;
+    color: $text;
     line-height: 1.2;
     -webkit-font-smoothing: antialiased;
     white-space: normal;
     transition: background-color $easing--regular;
 
-    &:hover {
+    &:hover, &:focus {
         background-color: $dark;
+        color: $light--light;
+        text-decoration: none;
     }
 }

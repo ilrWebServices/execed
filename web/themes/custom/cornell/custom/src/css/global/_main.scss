@@ -5,6 +5,16 @@
     padding: 0 4rem;
 }
 
+.page > .content {
+    margin-top: -4rem;
+}
+
+@media screen and (min-width: $break-lg) {
+    .dialog-off-canvas-main-canvas {
+        padding-left: 7rem;
+    }
+}
+
 @media screen and (max-width: $break-lg) {
     .content-wrapper {
         max-width: calc(#{$max-site-width} + 4rem); // Max width + padding
@@ -15,6 +25,6 @@
 @media screen and (max-width: $break-meds) {
     .content-wrapper {
         max-width: calc(#{$max-site-width} + 2rem); // Max width + padding
-        padding: 0 1rem;
+        padding: 0 2rem;
     }
 }

@@ -4,12 +4,25 @@
     color: $light--light;
     padding: 4rem;
 
+    .field--name-body {
+        svg {
+            width: 300px;
+            height: 120px;
+        }
+    }
+
     &__content {
         display: flex;
         flex-wrap: wrap;
         width: 100%;
         max-width: 1440px;
         margin: 0 auto;
+
+        #block-footeraddress {
+            p:first-of-type {
+                margin-top: .25rem;
+            }
+        }
     }
 
     .block-webform {
@@ -79,17 +92,15 @@
         }
 
         .button {
-            padding: .5rem 1rem;
-            margin: 0;
+            @include main-cta;
+            background-color: $light--light;
+            color: $dark;
             margin-left: 1.5rem;
-            background-color: transparent;
-            appearance: none;
-            border: 0;
-            border-radius: 0;
-            border-top: 1px solid $light--light;
-            border-bottom: 1px solid $light--light;
-            font-family: $font-body;
-            font-size: 1.25rem;
+            transition: color $easing--regular, background-color $easing--regular;
+
+            &:hover, &:focus {
+                background-color: $primary--light;
+            }
         }
     }
 
@@ -157,10 +168,6 @@
             a {
                 text-decoration: none;
                 color: $secondary;
-
-                &:hover {
-                    text-decoration: underline;
-                }
             }
         }
     }

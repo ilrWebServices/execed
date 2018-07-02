@@ -1,0 +1,30 @@
+{% import _self as square %}
+{% macro squares(amount, vertical, horizontal, speed) %}
+    {% set types = ['square', 'stripes', 'circle-square', 'slash-square'] %}
+    {% set filled = ['filled', 'not-filled'] %}
+    {% set colors = ['black', 'orange'] %}
+
+    {% for i in 1..amount %}
+        <div class="box {{ random(types) }} {{ random(filled) }} {{ random(colors) }} col-{{ horizontal }}-{{ random([1,2,3]) }} row-{{ vertical }}-{{ random([1,2,3]) }}" data-rellax-speed="{{ speed }}"></div>    
+    {% endfor %}
+{% endmacro %}
+
+<div class="squares" aria-hidden="true">
+    {% set speeds = [-2,-1,0,1,2] %}
+    
+    {% if lower_left %}
+        {{ square.squares(lower_left, 'bottom', 'left', random(speeds)) }}
+    {% endif %}
+
+    {% if lower_right %}
+        {{ square.squares(lower_right, 'bottom', 'right', random(speeds)) }}
+    {% endif %}
+
+    {% if upper_left %}
+        {{ square.squares(upper_left, 'top', 'left', random(speeds)) }}
+    {% endif %}
+
+    {% if upper_right %}
+        {{ square.squares(upper_right, 'top', 'right', random(speeds)) }}
+    {% endif %}
+</div>
