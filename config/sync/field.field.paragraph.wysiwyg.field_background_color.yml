@@ -1,0 +1,23 @@
+uuid: da065bfc-2930-4d7f-af9f-55f36e78640f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_color
+    - paragraphs.paragraphs_type.wysiwyg
+  module:
+    - options
+id: paragraph.wysiwyg.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+bundle: wysiwyg
+label: 'Background Color'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: white
+default_value_callback: ''
+settings: {  }
+field_type: list_string

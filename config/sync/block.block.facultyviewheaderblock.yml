@@ -1,0 +1,31 @@
+uuid: 02184fb3-9ebc-47ec-8719-a1f6c88998a2
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:f3c32a47-eeaf-4771-901f-6dc06fc0da88'
+  module:
+    - block_content
+    - system
+  theme:
+    - cornell
+id: facultyviewheaderblock
+theme: cornell
+region: content
+weight: -11
+provider: null
+plugin: 'block_content:f3c32a47-eeaf-4771-901f-6dc06fc0da88'
+settings:
+  id: 'block_content:f3c32a47-eeaf-4771-901f-6dc06fc0da88'
+  label: 'Our Faculty'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /faculty
+    negate: false
+    context_mapping: {  }

@@ -1,11 +1,10 @@
-cdn_provider: jsdelivr
 _core:
   default_config_hash: _5qrDuRmWmRVjW00si3U1s1NrgrocA4N653EYGRfgEE
 favicon:
   mimetype: image/vnd.microsoft.icon
-  path: ''
-  url: 'http://dev-cornell.pantheonsite.io/themes/cornell/favicon.ico'
-  use_default: 1
+  path: 'public://favicon.ico'
+  url: 'https://execed.ilr.cornell.edu/themes/cornell/favicon.ico'
+  use_default: 0
 schemas:
   bootstrap: 8000
   cornell: 8000
@@ -19,14 +18,13 @@ logo:
   url: ''
   use_default: 1
 region_wells:
-  utility: ''
   navigation: ''
   navigation_collapsible: ''
   header: ''
-  highlighted: ''
-  help: ''
   content: ''
   sidebar_first: ''
-  sidebar_second: well
+  sidebar_second: ''
   footer: ''
+  footer_bottom: ''
+  chat_bubble: ''
 table: ''

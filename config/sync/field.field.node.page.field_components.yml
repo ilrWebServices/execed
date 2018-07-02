@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_components
     - node.type.page
+    - paragraphs.paragraphs_type.bp_carousel
     - paragraphs.paragraphs_type.bp_tabs
     - paragraphs.paragraphs_type.content_grid
     - paragraphs.paragraphs_type.image_text2_block
@@ -29,6 +30,7 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
+      bp_carousel: bp_carousel
       wysiwyg: wysiwyg
       image_text2_block: image_text2_block
       image_touts: image_touts
@@ -53,8 +55,8 @@ settings:
         weight: -47
         enabled: false
       bp_carousel:
+        enabled: true
         weight: -46
-        enabled: false
       bp_column_wrapper:
         weight: -45
         enabled: false

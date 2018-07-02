@@ -1,4 +1,4 @@
-uuid: 5106ed20-b78c-47c4-bce4-89aafb0e6278
+uuid: 1601ac51-d489-4e64-983f-9a514c670079
 langcode: en
 status: open
 dependencies:
@@ -9,13 +9,13 @@ _core:
   default_config_hash: QCxQeKi6Joed6MGWIBdsYhCEgQGsu4kKTZGzxlbHJKs
 open: null
 close: null
-uid: null
+uid: 1
 template: false
-id: contact
-title: Contact
-description: 'Basic email contact webform.'
+id: chro_registration_request
+title: 'CHRO Registration Request'
+description: 'CHRO inquiry form'
 category: ''
-elements: "name:\n  '#type': textfield\n  '#title': Name\n  '#required': true\n  '#default_value': '[webform-authenticated-user:display-name]'\nemail:\n  '#type': email\n  '#title': Email\n  '#required': true\n  '#default_value': '[webform-authenticated-user:mail]'\nphone:\n  '#type': tel\n  '#title': Phone\ntitle:\n  '#type': textfield\n  '#title': Title\ncompany:\n  '#type': textfield\n  '#title': Company\nsubject:\n  '#type': select\n  '#title': Subject\n  '#options':\n    'General Information': General\n    'HR Strategy': 'HR Strategy'\n    'Custom Program': 'Custom Program'\n    'CHRO Program': 'CHRO Program'\n  '#empty_option': ' '\nmessage:\n  '#title': Message\n  '#type': textarea\n  '#required': true\n  '#test': 'Please ignore this email.'\ncaptcha:\n  '#type': captcha\n  '#captcha_type': recaptcha/reCAPTCHA\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Send message'\n"
+elements: "name:\n  '#type': textfield\n  '#title': Name\n  '#required': true\n  '#default_value': '[webform-authenticated-user:display-name]'\nemail:\n  '#type': email\n  '#title': Email\n  '#required': true\n  '#default_value': '[webform-authenticated-user:mail]'\nphone:\n  '#type': tel\n  '#title': Phone\n  '#required': true\ntitle:\n  '#type': textfield\n  '#title': Title\n  '#required': true\ncompany:\n  '#type': textfield\n  '#title': Company\n  '#required': true\nmessage:\n  '#title': Message\n  '#type': textarea\n  '#test': 'Please ignore this email.'\ncaptcha:\n  '#type': captcha\n  '#captcha_type': recaptcha/reCAPTCHA\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Send message'\n"
 css: ''
 javascript: ''
 settings:
@@ -74,7 +74,7 @@ settings:
   confirmation_type: url_message
   confirmation_title: ''
   confirmation_message: 'Your message has been sent.'
-  confirmation_url: 'https://execed.ilr.cornell.edu/'
+  confirmation_url: 'https://execed.ilr.cornell.edu/capabilities/modern-chro-role'
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -154,7 +154,7 @@ handlers:
       from_options: {  }
       from_name: default
       subject: default
-      body: default
+      body: "<p>Submitted on [webform_submission:created]</p>\n<p>Submitted by: [webform_submission:user]</p>\n<p>Submitted values are:</p>\n[webform_submission:values]"
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true

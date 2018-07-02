@@ -4,14 +4,14 @@ status: true
 dependencies:
   config:
     - field.field.node.insights.body
-    - field.field.node.insights.field_components_insights
+    - field.field.node.insights.field_components
     - field.field.node.insights.field_featured_image
     - field.field.node.insights.field_featured_video
     - field.field.node.insights.field_insight_client
     - field.field.node.insights.field_insight_topics
     - field.field.node.insights.field_meta_tags
     - field.field.node.insights.field_person_subhead
-    - field.field.node.insights.field_person_type
+    - field.field.node.insights.field_related_person
     - field.field.node.insights.field_yoast_seo
     - node.type.insights
   module:
@@ -34,14 +34,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_components_insights:
-    type: entity_reference_revisions_entity_view
-    weight: 4
+  field_components:
+    weight: 10
     label: above
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
     region: content
   field_featured_image:
     weight: 1
@@ -98,8 +98,8 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-  field_person_type:
-    weight: 5
+  field_related_person:
+    weight: 11
     label: above
     settings:
       link: true

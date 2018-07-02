@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.wysiwyg.field_background_color
     - field.field.paragraph.wysiwyg.field_body
     - paragraphs.paragraphs_type.wysiwyg
   module:
@@ -12,6 +13,12 @@ targetEntityType: paragraph
 bundle: wysiwyg
 mode: default
 content:
+  field_background_color:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_body:
     weight: 0
     settings:

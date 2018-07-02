@@ -14,7 +14,7 @@ elements: "email:\n  '#type': email\n  '#title': Email\n  '#placeholder': 'Enter
 css: ''
 javascript: ''
 settings:
-  ajax: false
+  ajax: true
   ajax_scroll_top: form
   page: true
   page_submit_path: ''
@@ -66,10 +66,10 @@ settings:
   draft_auto_save: false
   draft_saved_message: ''
   draft_loaded_message: ''
-  confirmation_type: page
-  confirmation_title: ''
+  confirmation_type: modal
+  confirmation_title: 'Message Sent.'
   confirmation_message: ''
-  confirmation_url: ''
+  confirmation_url: 'https://execed.ilr.cornell.edu'
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -128,4 +128,36 @@ access:
     roles: {  }
     users: {  }
     permissions: {  }
-handlers: {  }
+handlers:
+  email:
+    id: email
+    label: Email
+    handler_id: email
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: alexandriajlee@gmail.com
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      subject: default
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      html: true
+      attachments: false
+      twig: false
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''

@@ -23,7 +23,7 @@ bundle: image_text2_block
 mode: default
 content:
   field_back:
-    weight: 2
+    weight: 3
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -31,7 +31,7 @@ content:
     type: image_image
     region: content
   field_background_color:
-    weight: 8
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -45,14 +45,6 @@ content:
     type: text_textarea
     region: content
   field_eye:
-    weight: 3
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_headline_imgtxtblock:
     weight: 0
     settings:
       size: 60
@@ -60,14 +52,22 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_headline_imgtxtblock:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_image_alignment:
-    weight: 7
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_image_imgtxtblock:
-    weight: 1
+    weight: 2
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail

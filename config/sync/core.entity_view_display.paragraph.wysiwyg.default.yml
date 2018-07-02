@@ -3,15 +3,24 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.wysiwyg.field_background_color
     - field.field.paragraph.wysiwyg.field_body
     - paragraphs.paragraphs_type.wysiwyg
   module:
+    - options
     - text
 id: paragraph.wysiwyg.default
 targetEntityType: paragraph
 bundle: wysiwyg
 mode: default
 content:
+  field_background_color:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_body:
     weight: 0
     label: above

@@ -1,29 +1,28 @@
-uuid: 5c1558f3-794c-464f-8abe-01547cf663ed
+uuid: e3a90a25-96e6-4833-b89f-a4a0592b57ff
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_person_type
+    - field.storage.node.field_related_person
     - node.type.insights
-    - taxonomy.vocabulary.person_type
-id: node.insights.field_person_type
-field_name: field_person_type
+    - node.type.person
+id: node.insights.field_related_person
+field_name: field_related_person
 entity_type: node
 bundle: insights
 label: 'Related Person'
 description: ''
-required: false
-translatable: true
+required: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:taxonomy_term'
+  handler: 'default:node'
   handler_settings:
     target_bundles:
-      person_type: person_type
+      person: person
     sort:
-      field: name
-      direction: asc
+      field: _none
     auto_create: false
     auto_create_bundle: ''
 field_type: entity_reference

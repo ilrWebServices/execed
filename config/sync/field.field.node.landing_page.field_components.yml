@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_components
     - node.type.landing_page
+    - paragraphs.paragraphs_type.bp_carousel
     - paragraphs.paragraphs_type.bp_tabs
     - paragraphs.paragraphs_type.content_grid
     - paragraphs.paragraphs_type.image_text2_block
@@ -36,6 +37,7 @@ settings:
       content_grid: content_grid
       logo_grid: logo_grid
       webform: webform
+      bp_carousel: bp_carousel
     target_bundles_drag_drop:
       hero:
         weight: -51
@@ -77,8 +79,8 @@ settings:
         weight: -39
         enabled: false
       bp_carousel:
+        enabled: true
         weight: -38
-        enabled: false
       bp_columns:
         weight: -37
         enabled: false

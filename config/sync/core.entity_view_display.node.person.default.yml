@@ -18,7 +18,6 @@ dependencies:
     - field.field.node.person.field_person_suffix
     - field.field.node.person.field_person_type
     - field.field.node.person.field_phone
-    - field.field.node.person.field_related_insights
     - field.field.node.person.field_related_program
     - field.field.node.person.field_resources
     - field.field.node.person.field_yoast_seo
@@ -31,7 +30,6 @@ dependencies:
     - telephone
     - text
     - user
-    - viewsreference
     - yoast_seo
 id: node.person.default
 targetEntityType: node
@@ -163,15 +161,6 @@ content:
       title: ''
     third_party_settings: {  }
     type: telephone_link
-    region: content
-  field_related_insights:
-    weight: 18
-    label: above
-    settings:
-      plugin_types:
-        - block
-    third_party_settings: {  }
-    type: viewsreference_formatter
     region: content
   field_related_program:
     weight: 14
