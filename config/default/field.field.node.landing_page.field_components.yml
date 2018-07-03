@@ -11,6 +11,7 @@ dependencies:
     - paragraphs.paragraphs_type.image_text2_block
     - paragraphs.paragraphs_type.image_touts
     - paragraphs.paragraphs_type.logo_grid
+    - paragraphs.paragraphs_type.video
     - paragraphs.paragraphs_type.webform
     - paragraphs.paragraphs_type.wysiwyg
   module:
@@ -38,6 +39,7 @@ settings:
       logo_grid: logo_grid
       webform: webform
       bp_carousel: bp_carousel
+      video: video
     target_bundles_drag_drop:
       hero:
         weight: -51
@@ -114,4 +116,7 @@ settings:
       text_block_content_grid:
         weight: -27
         enabled: false
+      video:
+        enabled: true
+        weight: 27
 field_type: entity_reference_revisions

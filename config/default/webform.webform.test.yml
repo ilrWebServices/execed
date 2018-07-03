@@ -1,3 +1,4 @@
+uuid: 592af5e0-34da-482d-8d7e-cb7d7a08c3c9
 langcode: en
 status: open
 dependencies: {  }
@@ -145,4 +146,3 @@ access:
     users: {  }
     permissions: {  }
 handlers: {  }
-uuid: 592af5e0-34da-482d-8d7e-cb7d7a08c3c9

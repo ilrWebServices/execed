@@ -1,9 +1,12 @@
+uuid: 1419f662-29cd-477d-bff4-28f41461898f
 langcode: en
 status: closed
 dependencies:
   enforced:
     module:
       - webform_templates
+_core:
+  default_config_hash: QNlSCGXBlV0di6MrLp3RlRpzQYXN6enj_DI2KOigiU8
 open: null
 close: null
 uid: null
@@ -148,6 +151,3 @@ access:
     users: {  }
     permissions: {  }
 handlers: {  }
-uuid: 1419f662-29cd-477d-bff4-28f41461898f
-_core:
-  default_config_hash: QNlSCGXBlV0di6MrLp3RlRpzQYXN6enj_DI2KOigiU8
