@@ -36,6 +36,10 @@ mounts:
 build:
     flavor: composer
 
+dependencies:
+    php:
+        "drush/drush": "^9.0"
+
 # The hooks executed at various points in the lifecycle of the application.
 hooks:
     deploy: |
