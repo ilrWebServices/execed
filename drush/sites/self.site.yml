@@ -12,3 +12,8 @@
 #  user: www-admin
 #  root: /path/to/drupal
 #  uri: http://stage.example.com
+#
+
+local:
+ root: /Users/aaron/Vagrant/drupalvm/execed/web
+ uri: http://execed.test
