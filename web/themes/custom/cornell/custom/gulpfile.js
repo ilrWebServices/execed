@@ -69,12 +69,12 @@ gulp.task('twig', ['refreshCache'], function () {
     browserSync.reload();
 });
 
-gulp.task('refreshCache', shell.task(['lando drush cc render']));
+gulp.task('refreshCache', shell.task(['drush cc render']));
 
 // Watch asset folder for changes
 gulp.task('watch', ['scss', 'js'], function() {
     browserSync.init({
-        proxy: `https://${themeName}.lndo.site/`,
+        proxy: `http://execed.test/`,
         open: false
     });
 

@@ -5,6 +5,7 @@
   "main": "gulpfile.js",
   "dependencies": {
     "body-scroll-lock": "^2.3.3",
+    "fsevents": "^1.2.4",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-concat": "^2.6.1",
