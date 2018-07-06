@@ -1,9 +1,12 @@
+uuid: ac405507-5460-477c-b22d-90981c892098
 langcode: en
 status: closed
 dependencies:
   enforced:
     module:
       - webform_templates
+_core:
+  default_config_hash: '-9_2sOcAEcWu7XfInltvnBnLsVDHGiFbndwiqvJvp9A'
 open: null
 close: null
 uid: null
@@ -181,6 +184,3 @@ handlers:
       return_path: ''
       sender_mail: ''
       sender_name: ''
-uuid: ac405507-5460-477c-b22d-90981c892098
-_core:
-  default_config_hash: '-9_2sOcAEcWu7XfInltvnBnLsVDHGiFbndwiqvJvp9A'

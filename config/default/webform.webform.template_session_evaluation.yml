@@ -1,9 +1,12 @@
+uuid: 6a1f10bf-074a-4086-a048-5f270e92b076
 langcode: en
 status: closed
 dependencies:
   enforced:
     module:
       - webform_templates
+_core:
+  default_config_hash: zZSq_w4lBCCZ1i-HalWZtTzpP_JTUPxmPsn6XkOAkXY
 open: null
 close: null
 uid: null
@@ -181,6 +184,3 @@ handlers:
       return_path: ''
       sender_mail: ''
       sender_name: ''
-uuid: 6a1f10bf-074a-4086-a048-5f270e92b076
-_core:
-  default_config_hash: zZSq_w4lBCCZ1i-HalWZtTzpP_JTUPxmPsn6XkOAkXY
