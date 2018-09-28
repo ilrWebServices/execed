@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # download the prod db
-drush sql:sync @execed.master @execed._local --structure-tables-list=cache,cache_*
+drush sql:sync @execed.master @execed._local --structure-tables-list=cache,cache_* -y
 
 drush cr
 
