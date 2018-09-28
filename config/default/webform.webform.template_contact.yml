@@ -9,6 +9,7 @@ _core:
   default_config_hash: oD4-sBe1DuP4pjAgc9olBv1_uRKRv0LPw-lGOJBCads
 open: null
 close: null
+weight: 0
 uid: null
 template: true
 archive: false
@@ -184,6 +185,7 @@ handlers:
       return_path: ''
       sender_mail: ''
       sender_name: ''
+      theme: ''
   email_notification:
     id: email
     label: 'Email notification'
@@ -217,3 +219,4 @@ handlers:
       return_path: ''
       sender_mail: ''
       sender_name: ''
+      theme: ''

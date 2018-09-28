@@ -4,6 +4,7 @@ status: open
 dependencies: {  }
 open: null
 close: null
+weight: 0
 uid: 1
 template: false
 archive: false
@@ -179,3 +180,4 @@ handlers:
       return_path: ''
       sender_mail: ''
       sender_name: ''
+      theme: ''

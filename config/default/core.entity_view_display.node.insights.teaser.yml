@@ -25,4 +25,13 @@ content:
   links:
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_components: true
+  field_featured_image: true
+  field_featured_video: true
+  field_insight_client: true
+  field_insight_topics: true
+  field_meta_tags: true
+  field_person_subhead: true
+  field_related_person: true
+  field_yoast_seo: true

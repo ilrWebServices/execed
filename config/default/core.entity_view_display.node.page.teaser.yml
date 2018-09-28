@@ -27,4 +27,9 @@ content:
   links:
     weight: 101
     region: content
-hidden: {  }
+hidden:
+  field_components: true
+  field_meta_tags: true
+  field_person_subhead: true
+  field_program: true
+  field_yoast_seo: true

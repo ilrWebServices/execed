@@ -9,6 +9,7 @@ _core:
   default_config_hash: QCxQeKi6Joed6MGWIBdsYhCEgQGsu4kKTZGzxlbHJKs
 open: null
 close: null
+weight: 0
 uid: 1
 template: false
 archive: false
@@ -161,7 +162,7 @@ handlers:
     settings:
       states:
         - completed
-      to_mail: alexandriajlee@gmail.com
+      to_mail: al2269@cornell.edu
       to_options: {  }
       cc_mail: ''
       cc_options: {  }
@@ -171,7 +172,7 @@ handlers:
       from_options: {  }
       from_name: _default
       subject: _default
-      body: "<p>Submitted on [webform_submission:created]</p>\n<p>Submitted by: [webform_submission:user]</p>\n<p>Submitted values are:</p>\n[webform_submission:values]"
+      body: "<p>Submitted on [webform_submission:created]</p>\r\n<p>Submitted by: [webform_submission:user]</p>\r\n<p>Submitted values are:</p>\r\n[webform_submission:values]"
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
@@ -184,36 +185,4 @@ handlers:
       return_path: ''
       sender_mail: ''
       sender_name: ''
-  email_notification:
-    id: email
-    label: 'Email notification'
-    handler_id: email_notification
-    status: true
-    conditions: {  }
-    weight: 1
-    settings:
-      states:
-        - completed
-      to_mail: alexandriajlee@gmail.com
-      to_options: {  }
-      cc_mail: ''
-      cc_options: {  }
-      bcc_mail: ''
-      bcc_options: {  }
-      from_mail: '[webform_submission:values:email:raw]'
-      from_options: {  }
-      from_name: '[webform_submission:values:name:raw]'
-      subject: _default
-      body: _default
-      excluded_elements: {  }
-      ignore_access: false
-      exclude_empty: true
-      exclude_empty_checkbox: false
-      html: true
-      attachments: false
-      twig: false
-      debug: false
-      reply_to: ''
-      return_path: ''
-      sender_mail: ''
-      sender_name: ''
+      theme: ''

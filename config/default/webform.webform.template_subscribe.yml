@@ -9,6 +9,7 @@ _core:
   default_config_hash: '-9_2sOcAEcWu7XfInltvnBnLsVDHGiFbndwiqvJvp9A'
 open: null
 close: null
+weight: 0
 uid: null
 template: true
 archive: false
@@ -184,3 +185,4 @@ handlers:
       return_path: ''
       sender_mail: ''
       sender_name: ''
+      theme: ''

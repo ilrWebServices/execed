@@ -25,4 +25,21 @@ content:
   links:
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_address: true
+  field_cv: true
+  field_location: true
+  field_meta_tags: true
+  field_person_designation: true
+  field_person_email: true
+  field_person_first_name: true
+  field_person_full_biography_link: true
+  field_person_image: true
+  field_person_last_name: true
+  field_person_prefix: true
+  field_person_suffix: true
+  field_person_type: true
+  field_phone: true
+  field_related_program: true
+  field_resources: true
+  field_yoast_seo: true
