@@ -28,7 +28,7 @@ $mobile-nav-height: 80px;
         transition: box-shadow $easing--regular;
         appearance: none;
         border-radius: 0;
-        
+
         &:focus {
             outline: none;
             box-shadow: inset 0 -2px 0 $primary;
@@ -62,7 +62,7 @@ $mobile-nav-height: 80px;
     }
 }
 
-// 960+ 
+// 960+
 @media screen and (min-width: $break-lg) {
     .site-header {
         $parent: &;
@@ -74,7 +74,7 @@ $mobile-nav-height: 80px;
         + div {
             padding-left: 7rem;
         }
-        
+
         &__content {
             position: relative;
             max-width: 7rem;
@@ -129,7 +129,7 @@ $mobile-nav-height: 80px;
         }
 
         &__logo-image {
-            width: 11.25rem;
+            width: 15.25rem;
         }
 
         &__hamburger {
@@ -184,6 +184,7 @@ $mobile-nav-height: 80px;
 
         &__logo-image {
             height: $mobile-nav-height - 16px;
+            width: 13.25rem;
         }
 
         &__hamburger {
@@ -212,11 +213,11 @@ $mobile-nav-height: 80px;
                     &:first-of-type, &:last-of-type {
                         transform: scale3d(0, 1, 1);
                     }
-    
+
                     &:nth-of-type(2) {
                         transform: rotate(45deg);
                     }
-    
+
                     &:nth-of-type(3) {
                         transform: rotate(-45deg);
                     }
@@ -290,7 +291,7 @@ $mobile-nav-height: 80px;
             margin-top: 2rem;
             padding: 0 1.75rem;
         }
-        
+
         &__search-input {
             background: #f3f3f3;
             padding: .75rem .75rem .65rem 2.25rem;
