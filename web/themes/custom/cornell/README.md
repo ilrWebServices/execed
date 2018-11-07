@@ -3,6 +3,8 @@
 <!-- @ingroup sub_theming -->
 # Sass Starterkit
 
+## Tl;dr - Currently, the project requires node v9. Consider [nvm](https://github.com/creationix/nvm) so you can switch to this older version. After installing, nvm, `$ nvm use v9` and `$ cd web/themes/custom/cornell/custom`, then `$ npm install`. After which, you should be able to change the relevant scss (which somewhat absurdly lives in web/themes/custom/cornell/custom/src/css), then `$ gulp scss`. Other gulp tasks are currently throwing errors, and there wasn't a quick fix.
+
 Below are instructions on how to create a Bootstrap sub-theme using a Sass
 preprocessor.
 
@@ -42,7 +44,7 @@ properly integrate with the [Bootstrap Framework]. It may contain a few
 enhancements, feel free to edit this file as you see fit.
 
 The `./THEMENAME/scss/style.scss` file is the glue that combines:
-`_default-variables.scss`, [Bootstrap Framework Source Files] and the 
+`_default-variables.scss`, [Bootstrap Framework Source Files] and the
 `overrides.scss` file together. Generally, you will not need to modify this
 file unless you need to add or remove files to be imported. This is the file
 that you should compile to `./THEMENAME/css/style.css` (note the same file
