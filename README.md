@@ -43,6 +43,14 @@ Then, use the included script to sync the database:
 ./bin/sync-prod.sh
 ```
 
+## Content Images and Files
+
+Rather than sync image (and other) files along with the database content, you may optionally proxy them. The `stage_file_proxy` module is used for this, and it may be enabled by adding the following to `web/sites/default/settings.local.php`, clearing your caches with `drush cr`, and running a config import (e.g. `drush cim`).
+
+```
+$config['config_split.config_split.local']['status'] = TRUE;
+```
+
 ## Theming
 
 The custom bootstrap-based theme setup info can be found in `web/themes/custom/cornell/README.md`.
