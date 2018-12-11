@@ -135,7 +135,8 @@
         ],
         "post-update-cmd": [
             "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-        ]
+        ],
+        "sync-prod": "bin/sync-prod.sh"
     },
     "extra": {
         "installer-paths": {
