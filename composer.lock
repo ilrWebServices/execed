@@ -2355,17 +2355,17 @@
         },
         {
             "name": "drupal/ckeditor_responsive_plugin",
-            "version": "1.0.0-beta4",
+            "version": "1.0.0-beta5",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/ckeditor_responsive_plugin",
-                "reference": "8.x-1.0-beta4"
+                "reference": "8.x-1.0-beta5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ckeditor_responsive_plugin-8.x-1.0-beta4.zip",
-                "reference": "8.x-1.0-beta4",
-                "shasum": "4e00775b54826fea6b9dc589bacea67acc9eae93"
+                "url": "https://ftp.drupal.org/files/projects/ckeditor_responsive_plugin-8.x-1.0-beta5.zip",
+                "reference": "8.x-1.0-beta5",
+                "shasum": "d91aa31cbcc4d65360c170793671c7751dec01f7"
             },
             "require": {
                 "drupal/core": "*"
@@ -2376,8 +2376,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta4",
-                    "datestamp": "1490852284",
+                    "version": "8.x-1.0-beta5",
+                    "datestamp": "1539261480",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
