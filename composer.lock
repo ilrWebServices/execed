@@ -1944,28 +1944,23 @@
         },
         {
             "name": "drupal/bg_image_formatter",
-            "version": "1.2.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/bg_image_formatter",
-                "reference": "8.x-1.2"
+                "reference": "8.x-1.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/bg_image_formatter-8.x-1.2.zip",
-                "reference": "8.x-1.2",
-                "shasum": "5766cb2c9c3642e888f2448e164e978d4d8f1fbb"
+                "url": "https://ftp.drupal.org/files/projects/bg_image_formatter-8.x-1.5.zip",
+                "reference": "8.x-1.5",
+                "shasum": "6869a34b737e7c75c725855515670c9fba867b94"
             },
             "require": {
                 "drupal/core": "~8.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.7",
-                "phpmd/phpmd": "^2.6",
-                "phpro/grumphp": "^0.12",
-                "sebastian/phpcpd": "^3.0",
-                "sensiolabs/security-checker": "^4.1",
-                "squizlabs/php_codesniffer": "^3.0"
+                "drupol/drupal-conventions": "^1"
             },
             "type": "drupal-module",
             "extra": {
@@ -1973,12 +1968,15 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.2",
-                    "datestamp": "1532102285",
+                    "version": "8.x-1.5",
+                    "datestamp": "1548431581",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "grumphp": {
+                    "config-default-path": "vendor/drupol/drupal-conventions/config/drupal8/grumphp.yml"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -1992,9 +1990,9 @@
             ],
             "authors": [
                 {
-                    "name": "Pol Dellaiera",
-                    "homepage": "https://www.drupal.org/user/931394",
-                    "email": "pol.dellaiera@protonmail.com"
+                    "name": "Pol Dellaiera (@drupol)",
+                    "homepage": "https://www.drupal.org/u/pol",
+                    "role": "Maintainer"
                 },
                 {
                     "name": "Pol",
@@ -2005,8 +2003,8 @@
                     "homepage": "https://www.drupal.org/user/772766"
                 }
             ],
-            "description": "This module provides an image formatter who allows you to set an image in background of a container.",
-            "homepage": "https://drupal.org/project/bg_image_formatter",
+            "description": "This module provides an image formatter that allows you to set an image in background of a container.",
+            "homepage": "https://drupal.org/project/link_trail_by_path",
             "support": {
                 "source": "http://cgit.drupalcode.org/bg_image_formatter"
             }
