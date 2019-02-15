@@ -6,6 +6,12 @@ body.case-studies { // the case studies page
     }
 }
 
+.page-node-type-case-study {
+    .case-study__featured-image {
+        margin-bottom: 2rem;
+    }
+}
+
 .case-study.full {
     font-size: 1.25rem;
     display: flex;

@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.case_study.field_person_subhead
     - field.field.node.case_study.field_quotee
     - field.field.node.case_study.field_yoast_seo
+    - image.style.flexslider_full
     - node.type.case_study
   module:
     - entity_reference_revisions
@@ -56,9 +57,9 @@ content:
     region: content
   field_featured_image:
     weight: 1
-    label: above
+    label: hidden
     settings:
-      image_style: ''
+      image_style: flexslider_full
       image_link: ''
       svg_render_as_image: '1'
       svg_attributes:
