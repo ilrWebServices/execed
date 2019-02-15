@@ -1,0 +1,19 @@
+table {
+    td {
+        border: 1px solid #d3ccc5;
+        padding: 0.5rem 1rem 0 1rem;
+
+        p {
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 1rem;
+            display: block !important;
+
+            &::before {
+                display: none !important; // ugh
+            }
+        }
+    }
+}
