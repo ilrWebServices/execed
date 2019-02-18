@@ -1,6 +1,7 @@
 @import 'case-study/sidebar';
 
-body.case-studies { // the case studies page
+body.case-studies,
+body.client-stories { // the case studies / client stories page
     .basic-hero__heading {
         text-align: left;
     }
