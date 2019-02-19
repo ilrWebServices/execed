@@ -1,0 +1,73 @@
+{#
+/**
+ * @file
+ * Theme override to display a node.
+ *
+ * Available variables:
+ * - node: The node entity with limited access to object properties and methods.
+		 Only "getter" methods (method names starting with "get", "has", or "is")
+		 and a few common methods such as "id" and "label" are available. Calling
+		 other methods (such as node.delete) will result in an exception.
+ * - label: The title of the node.
+ * - content: All node items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - content.field_featured_image:
+ * - content.field_client_logo:
+ * - content.field_person_subhead:
+ * - content.body:
+ * - content.links:
+ * - content.field_client_quote:
+ * - content.field_quotee:
+ *
+ * @ingroup templates
+ *
+ * @see template_preprocess_node()
+ *
+ * @todo Remove the id attribute (or make it a class), because if that gets
+ *   rendered twice on a page this is invalid CSS for example: two lists
+ *   in different view modes.
+ */
+#}
+{%
+  set classes = [
+    node.bundle|clean_class,
+    node.isPromoted() ? 'is-promoted',
+    node.isSticky() ? 'is-sticky',
+    not node.isPublished() ? 'is-unpublished',
+    view_mode ? view_mode|clean_class,
+    'clearfix',
+  ]
+%}
+<div class="case-study__wrapper">
+    <div class="case-study__image">
+        {{ content.field_featured_image }}
+    </div>
+    <article{{ attributes.addClass(classes) }}>
+        <div class="case-study__content-wrapper">
+            <h3>Client Story</h3>
+            <div class="case-study__logo">
+                {{ content.field_client_logo }}
+            </div>
+            <div class="case-study__content">
+                <h2 class="case-study__title">
+                    <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+                </h2>
+                {{ content.field_person_subhead }}
+                <p>{{ node.body.summary }}</p>
+                <div class="case-study__more">
+                    <a href="{{url}}">Read Full Story</a>
+                </div>
+            </div>
+        </div>
+        <div class="case-study__quote">
+            <div class="case-study__quote-text">
+                {{ content.field_client_quote }}
+            </div>
+            <div class="case-study__quote-attrubution">
+                {{ content.field_quotee }}
+            </div>
+        </div>
+    </article>
+</div>

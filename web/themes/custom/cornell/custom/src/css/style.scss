@@ -32,10 +32,12 @@
 @import 'components/image-text-block';
 @import 'components/carousel-gallery';
 @import 'components/content-grid';
+@import 'components/tables';
 @import 'components/video';
 @import 'components/wysiwyg';
 
 // page templates
+@import 'templates/case-study';
 @import 'templates/insights';
 @import 'templates/people';
 @import 'templates/person';

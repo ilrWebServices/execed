@@ -1,0 +1,86 @@
+uuid: 5738465d-504e-4732-9d70-0f0d4d6b0aa1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.case_study.body
+    - field.field.node.case_study.field_client_logo
+    - field.field.node.case_study.field_client_quote
+    - field.field.node.case_study.field_components
+    - field.field.node.case_study.field_featured_image
+    - field.field.node.case_study.field_meta_tags
+    - field.field.node.case_study.field_person_subhead
+    - field.field.node.case_study.field_quotee
+    - field.field.node.case_study.field_yoast_seo
+    - image.style.flexslider_full
+    - node.type.case_study
+  module:
+    - svg_image
+    - text
+    - user
+id: node.case_study.teaser
+targetEntityType: node
+bundle: case_study
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 2
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_client_logo:
+    type: image
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: content
+      svg_render_as_image: '1'
+      svg_attributes:
+        width: ''
+        height: ''
+    third_party_settings: {  }
+  field_client_quote:
+    type: string
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_featured_image:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: flexslider_full
+      image_link: ''
+      svg_render_as_image: '1'
+      svg_attributes:
+        width: ''
+        height: ''
+    third_party_settings: {  }
+  field_quotee:
+    type: string
+    weight: 5
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  links:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_components: true
+  field_meta_tags: true
+  field_person_subhead: true
+  field_yoast_seo: true

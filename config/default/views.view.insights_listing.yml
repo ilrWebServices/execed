@@ -8,11 +8,9 @@ dependencies:
     - field.storage.node.field_person_subhead
     - image.style.thumbnail
     - node.type.insights
-    - taxonomy.vocabulary.insight_topics
   module:
     - node
     - svg_image
-    - taxonomy
     - text
     - user
     - views_infinite_scroll
@@ -357,96 +355,7 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
-        field_insight_topics_target_id:
-          id: field_insight_topics_target_id
-          table: node__field_insight_topics
-          field: field_insight_topics_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value: {  }
           group: 1
-          exposed: true
-          expose:
-            operator_id: field_insight_topics_target_id_op
-            label: 'Topics '
-            description: ''
-            use_operator: false
-            operator: field_insight_topics_target_id_op
-            identifier: field_insight_topics_target_id
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: insight_topics
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
-        combine:
-          id: combine
-          table: views
-          field: combine
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: word
-          value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: combine_op
-            label: 'Search insights'
-            description: ''
-            use_operator: false
-            operator: combine_op
-            identifier: combine
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              content_administrator: '0'
-              content_editor: '0'
-            placeholder: 'Search Insights'
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          fields:
-            field_person_subhead: field_person_subhead
-            title: title
-            body: body
-          plugin_id: combine
       sorts:
         created:
           id: created
@@ -508,6 +417,10 @@ display:
           plugin_id: node_nid
       display_extenders: {  }
       use_ajax: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
@@ -515,7 +428,6 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -537,7 +449,6 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:

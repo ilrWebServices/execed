@@ -1,25 +1,22 @@
-uuid: f8998655-c929-4e11-9838-5cee087733a2
+uuid: efa554be-650b-4abe-a196-cbfd5a8434ab
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_components
-    - node.type.page
-    - paragraphs.paragraphs_type.bp_carousel
-    - paragraphs.paragraphs_type.bp_tabs
-    - paragraphs.paragraphs_type.bp_view
-    - paragraphs.paragraphs_type.content_grid
+    - node.type.case_study
     - paragraphs.paragraphs_type.image_text2_block
     - paragraphs.paragraphs_type.image_touts
     - paragraphs.paragraphs_type.logo_grid
+    - paragraphs.paragraphs_type.text_block_content_grid
     - paragraphs.paragraphs_type.webform
     - paragraphs.paragraphs_type.wysiwyg
   module:
     - entity_reference_revisions
-id: node.page.field_components
+id: node.case_study.field_components
 field_name: field_components
 entity_type: node
-bundle: page
+bundle: case_study
 label: Components
 description: ''
 required: false
@@ -31,92 +28,86 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
-      bp_carousel: bp_carousel
-      wysiwyg: wysiwyg
       image_text2_block: image_text2_block
       image_touts: image_touts
-      bp_tabs: bp_tabs
-      content_grid: content_grid
       logo_grid: logo_grid
+      text_block_content_grid: text_block_content_grid
       webform: webform
-      bp_view: bp_view
+      wysiwyg: wysiwyg
     target_bundles_drag_drop:
-      text_block_content_grid:
-        weight: -51
-        enabled: false
       bp_accordion:
-        weight: -50
+        weight: 26
         enabled: false
       bp_accordion_section:
-        weight: -49
+        weight: 27
         enabled: false
       bp_blank:
-        weight: -48
+        weight: 28
         enabled: false
       bp_block:
-        weight: -47
+        weight: 29
         enabled: false
       bp_carousel:
-        enabled: true
-        weight: -46
-      bp_column_wrapper:
-        weight: -45
+        weight: 30
         enabled: false
       bp_columns:
-        weight: -44
+        weight: 31
         enabled: false
       bp_columns_three_uneven:
-        weight: -43
+        weight: 32
         enabled: false
       bp_columns_two_uneven:
-        weight: -42
+        weight: 33
+        enabled: false
+      bp_column_wrapper:
+        weight: 34
         enabled: false
       bp_image:
-        weight: -41
+        weight: 35
         enabled: false
       bp_modal:
-        weight: -40
+        weight: 36
         enabled: false
       bp_simple:
-        weight: -39
+        weight: 37
+        enabled: false
+      bp_tabs:
+        weight: 38
         enabled: false
       bp_tab_section:
-        weight: -38
+        weight: 39
         enabled: false
-      wysiwyg:
-        enabled: true
-        weight: -37
-      image_text2_block:
-        enabled: true
-        weight: -36
-      image_touts:
-        enabled: true
-        weight: -35
-      bp_tabs:
-        enabled: true
-        weight: -34
-      content_grid:
-        enabled: true
-        weight: -33
-      logo_grid:
-        enabled: true
-        weight: -32
-      webform:
-        enabled: true
-        weight: -31
       bp_view:
-        enabled: true
-        weight: -30
+        weight: 40
+        enabled: false
+      content_grid:
+        weight: 41
+        enabled: false
       cornell_slideshow_:
-        weight: -29
+        weight: 42
         enabled: false
       hero:
-        weight: -28
+        weight: 43
         enabled: false
+      image_text2_block:
+        enabled: true
+        weight: 44
+      image_touts:
+        enabled: true
+        weight: 45
+      logo_grid:
+        enabled: true
+        weight: 46
+      text_block_content_grid:
+        enabled: true
+        weight: 47
       tout_block:
-        weight: -27
+        weight: 48
         enabled: false
-      video:
+      webform:
+        enabled: true
+        weight: 49
+      wysiwyg:
+        enabled: true
         weight: 50
-        enabled: false
 field_type: entity_reference_revisions
