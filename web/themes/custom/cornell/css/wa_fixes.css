@@ -1,0 +1,32 @@
+/* WA CSS fixes */
+/* Body */
+.insights{
+  /* For Insights page, change <body> display property from flex to block to fix the issue with "skip to main content" button not showing up properly */
+  display: block;
+}
+
+/* Chat with us widget */
+.chat-bubble__popup{
+  background-color: #E72113;
+}
+.field label, .webform-submission-form label{
+  color: #000000;
+}
+.chat-bubble__trigger:focus{
+  outline: -webkit-focus-ring-color auto 5px;
+}
+.chat-bubble__popup button, .chat-bubble__popup div.chat-bubble__popup-content{
+  display: none;
+}
+
+/* Footer */
+.site-footer nav .menu a{
+  text-decoration: underline;
+  text-decoration-color: #ef4035;
+}
+#dropdown > nav > ul > li:nth-child(2) a::after{
+  content: none;
+}
+#dropdown > nav > ul > li:nth-child(3) a::after{
+  content: none;
+}
