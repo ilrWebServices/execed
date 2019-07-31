@@ -44,16 +44,17 @@
                     {% endfor %}
                 </p>
             {% endif %}
+            {% set randomId = random(range(0, 900000)) %}
             {% if item.title %}
-                <h2 class="insights-grid__title">{{ item.title.value }}</h2>
+                <h2 class="insights-grid__title" id="{{ randomId }}">{{ item.title.value }}</h2>
             {% endif %}
 
             <div class="insights-grid__body rte">
                 {% set body = item.body.value|striptags|trim %}
                 {{ (body|length > 200 ? body|slice(0, 201)|split(' ')|slice(0, -1)|join(' ') ~ '…' : body)|raw }}
             </div>
-            
-            <a class="insights-grid__cta" href="{{ path('entity.node.canonical', { 'node': item.nid.value }) }}">Read More</a>
+
+            <a class="insights-grid__cta" href="{{ path('entity.node.canonical', { 'node': item.nid.value }) }}" {% if item.title %} aria-labelledby="{{ randomId }}"{% endif %}>Read More</a>
         </div>
     {% endfor %}
 {% elseif empty %}

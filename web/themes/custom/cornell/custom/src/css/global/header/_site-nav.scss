@@ -45,26 +45,10 @@
                 content: '';
                 position: absolute;
                 z-index: -1;
-                left: -1.75rem; 
+                left: -1.75rem;
                 top: 0;
                 height: 100%;
                 width: calc(100% + 3.5rem);
-            }
-
-            &::after {
-                content: '';
-                position: absolute;
-                z-index: 1;
-                right: 1rem;
-                top: calc(50% - .375rem);
-                width: .75rem;
-                height: .75rem;
-                pointer-events: none;
-                border-top: 1px solid $dark--dark;
-                border-right: 1px solid $dark--dark;
-                transform: rotate(45deg);
-                opacity: 0;
-                transition: opacity .01s linear .12s;
             }
 
             &:hover, &:focus {
@@ -80,6 +64,22 @@
                 svg {
                     fill: $primary;
                 }
+            }
+
+            &.has-child::after {
+                content: '';
+                position: absolute;
+                z-index: 1;
+                right: 1rem;
+                top: calc(50% - .375rem);
+                width: .75rem;
+                height: .75rem;
+                pointer-events: none;
+                border-top: 1px solid $dark--dark;
+                border-right: 1px solid $dark--dark;
+                transform: rotate(45deg);
+                opacity: 0;
+                transition: opacity .01s linear .12s;
             }
         }
 
@@ -180,7 +180,7 @@
                 content: '';
                 position: absolute;
                 z-index: -1;
-                left: -1.75rem; 
+                left: -1.75rem;
                 top: 0;
                 height: 100%;
                 width: calc(100% + 3.5rem);

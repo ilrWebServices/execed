@@ -3,6 +3,7 @@ global:
     theme:
       css/style.css: {}
       css/custom.css: {}
+      css/wa_fixes.css: {}
   js:
     js/custom.js: {}
 
