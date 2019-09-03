@@ -5,5 +5,4 @@ dependencies: {  }
 name: Client
 vid: client
 description: ''
-hierarchy: 0
 weight: 0

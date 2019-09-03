@@ -1,23 +1,23 @@
-uuid: 6951151b-f1bd-4555-9a5b-b682c055aef4
+uuid: 2910d16c-0fce-44ce-b84b-624f8801874e
 langcode: en
-status: closed
+status: open
 dependencies:
   enforced:
     module:
-      - webform_templates
+      - webform
 _core:
-  default_config_hash: QPg-l0VMqYN1LLXv7Wfs2dIbg4vFDflx8reGu-2UYl0
+  default_config_hash: QCxQeKi6Joed6MGWIBdsYhCEgQGsu4kKTZGzxlbHJKs
 open: null
 close: null
 weight: 0
-uid: null
-template: true
+uid: 30
+template: false
 archive: false
-id: template_feedback
-title: Feedback
-description: 'A basic feedback template.'
+id: hr_leadership_
+title: 'HR Leadership Application'
+description: 'Application for HR Leadership for Organizational Excellence'
 category: ''
-elements: "type:\n  '#title': 'Type of Feedback'\n  '#type': webform_radios_other\n  '#required': true\n  '#options':\n    Comments: Comments\n    'Report a Bug': 'Report a Bug'\n    Questions: Questions\n  '#options_display': side_by_side\ncomments:\n  '#title': 'Your Feedback'\n  '#type': textarea\n  '#required': true\nname:\n  '#title': 'Your Name'\n  '#type': textfield\n  '#required': true\nemail:\n  '#title': 'Your Email'\n  '#type': email\n  '#required': true\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Submit feedback'\n"
+elements: "name:\n  '#type': textfield\n  '#title': Name\n  '#required': true\n  '#default_value': '[current-user:display-name]'\ntitle:\n  '#type': textfield\n  '#title': Title\n  '#required': true\ncompany:\n  '#type': textfield\n  '#title': Organization\n  '#required': true\n  '#format_items': comma\norganization_type:\n  '#type': select\n  '#title': 'Organization Type'\n  '#options':\n    Public: Public\n    Private: Private\n    Non-profit: Non-profit\n    Government: Government\n    Other: Other\ncell_phone:\n  '#type': tel\n  '#title': Phone\n  '#format_items': comma\nemail:\n  '#type': email\n  '#title': Email\n  '#required': true\n  '#default_value': '[current-user:mail]'\nlinkedin_profile_url:\n  '#type': textfield\n  '#title': 'LinkedIn Profile URL'\nyears_of_hr_experience:\n  '#type': number\n  '#title': 'Years of HR Experience'\n  '#format_items': comma\nmessage:\n  '#type': textarea\n  '#title': 'Please briefly describe your current role and leadership responsibilities.'\n  '#format_items': comma\n  '#test': 'Please ignore this email.'\nhave_you_attended_a_previous_ilr_course_program_:\n  '#type': select\n  '#title': 'Have you attended a previous ILR course/program?'\n  '#options': yes_no\nare_you_a_cornell_alum_:\n  '#type': select\n  '#title': 'Are you a Cornell alum?'\n  '#options': yes_no\nhow_did_you_hear_about_this_program_:\n  '#type': textarea\n  '#title': 'How did you hear about this program?'\n  '#format_items': comma\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': Submit\ncaptcha:\n  '#type': captcha\n  '#captcha_type': recaptcha/reCAPTCHA"
 css: ''
 javascript: ''
 settings:
@@ -83,10 +83,10 @@ settings:
   draft_auto_save: false
   draft_saved_message: ''
   draft_loaded_message: ''
-  confirmation_type: page
+  confirmation_type: url_message
   confirmation_title: ''
-  confirmation_message: 'Thank you for your feedback.'
-  confirmation_url: '<front>'
+  confirmation_message: 'Thank you. Your application has been submitted.'
+  confirmation_url: 'https://execed.ilr.cornell.edu/hr-leadership'
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -108,6 +108,26 @@ settings:
   results_disabled: false
   results_disabled_ignore: false
   token_update: false
+  form_title: both
+  form_remote_addr: true
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  wizard_progress_link: false
+  wizard_preview_link: false
+  limit_total_unique: false
+  limit_user_unique: false
 access:
   create:
     roles:
@@ -162,67 +182,17 @@ handlers:
     settings:
       states:
         - completed
-      to_mail: '[webform_submission:values:email:raw]'
+      to_mail: ems434@cornell.edu
       to_options: {  }
-      cc_mail: ''
+      cc_mail: kts47@cornell.edu
       cc_options: {  }
-      bcc_mail: ''
+      bcc_mail: al2269@cornell.edu
       bcc_options: {  }
       from_mail: _default
       from_options: {  }
       from_name: _default
       subject: _default
-      body: '[webform_submission:values:comments:value]'
-      excluded_elements: {  }
-      ignore_access: false
-      exclude_empty: true
-      exclude_empty_checkbox: false
-      html: true
-      attachments: false
-      twig: false
-      debug: false
-      reply_to: ''
-      return_path: ''
-      sender_mail: ''
-      sender_name: ''
-      theme: ''
-      theme_name: ''
-  email_notification:
-    id: email
-    label: 'Email notification'
-    handler_id: email_notification
-    status: true
-    conditions: {  }
-    weight: 1
-    settings:
-      states:
-        - completed
-      to_mail: '[webform_submission:values:type:raw]'
-      to_options:
-        -
-          value: Comments
-          text: '[site:mail]'
-        -
-          value: 'Report a Bug'
-          text: '[site:mail]'
-        -
-          value: Questions
-          text: '[site:mail]'
-        -
-          value: _other_
-          text: '[site:mail]'
-        -
-          value: _default_
-          text: '[site:mail]'
-      cc_mail: ''
-      cc_options: {  }
-      bcc_mail: ''
-      bcc_options: {  }
-      from_mail: '[webform_submission:values:email:raw]'
-      from_options: {  }
-      from_name: '[webform_submission:values:name:raw]'
-      subject: _default
-      body: '[webform_submission:values:comments:value]'
+      body: _default
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true

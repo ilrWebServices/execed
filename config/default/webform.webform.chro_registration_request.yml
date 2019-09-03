@@ -162,11 +162,11 @@ handlers:
     settings:
       states:
         - completed
-      to_mail: al2269@cornell.edu
+      to_mail: ep386@cornell.edu
       to_options: {  }
       cc_mail: ''
       cc_options: {  }
-      bcc_mail: ''
+      bcc_mail: al2269@cornell.edu
       bcc_options: {  }
       from_mail: _default
       from_options: {  }
@@ -186,3 +186,4 @@ handlers:
       sender_mail: ''
       sender_name: ''
       theme: ''
+      theme_name: ''
