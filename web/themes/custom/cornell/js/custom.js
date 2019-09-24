@@ -1362,7 +1362,7 @@ CRN.formValidation = function (CRN, $) {
       errorMessage.id = 'error-for' + id;
       field.parentNode.insertBefore(errorMessage, field.nextSibiling);
     }
-    field.setAttribute('aria-describedby', 'error-for-' + id);
+    field.setAttribute('aria-describedby', 'error-for' + id);
     errorMessage.innerHTML = '* ' + error;
   };
 

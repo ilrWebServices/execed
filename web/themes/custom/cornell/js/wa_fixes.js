@@ -14,5 +14,10 @@
       for(let i=0; i<navElementsArray.length;i++){
         navElementsArray.children().after('');
       }
+
+      // hide hamburger menu when page is zoomed in and after you tab our of the last element (search element)
+      $( "#edit-keys" ).blur(function() {
+        $('#hamburger').click();
+      });
     });
 } )( jQuery );
