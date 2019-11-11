@@ -1,4 +1,4 @@
-uuid: 2910d16c-0fce-44ce-b84b-624f8801874e
+uuid: 26f3e378-ee4e-43c2-9492-e4145eac8a76
 langcode: en
 status: open
 dependencies:
@@ -13,11 +13,11 @@ weight: 0
 uid: 30
 template: false
 archive: false
-id: hr_leadership_
-title: 'HR Leadership Application'
-description: 'Application for HR Leadership for Organizational Excellence'
+id: global_supply_chain_application
+title: 'Global Supply Chain Application'
+description: 'Application for Global Supply Chain'
 category: ''
-elements: "name:\n  '#type': textfield\n  '#title': Name\n  '#required': true\n  '#default_value': '[current-user:display-name]'\ntitle:\n  '#type': textfield\n  '#title': Title\n  '#required': true\ncompany:\n  '#type': textfield\n  '#title': Organization\n  '#required': true\n  '#format_items': comma\norganization_type:\n  '#type': select\n  '#title': 'Organization Type'\n  '#options':\n    Public: Public\n    Private: Private\n    Non-profit: Non-profit\n    Government: Government\n    Other: Other\ncell_phone:\n  '#type': tel\n  '#title': Phone\n  '#format_items': comma\nemail:\n  '#type': email\n  '#title': Email\n  '#required': true\n  '#default_value': '[current-user:mail]'\nlinkedin_profile_url:\n  '#type': textfield\n  '#title': 'LinkedIn Profile URL'\nyears_of_hr_experience:\n  '#type': number\n  '#title': 'Years of HR Experience'\n  '#format_items': comma\nmessage:\n  '#type': textarea\n  '#title': 'Please briefly describe your current role and leadership responsibilities.'\n  '#format_items': comma\n  '#test': 'Please ignore this email.'\nhave_you_attended_a_previous_ilr_course_program_:\n  '#type': select\n  '#title': 'Have you attended a previous ILR course/program?'\n  '#options': yes_no\nare_you_a_cornell_alum_:\n  '#type': select\n  '#title': 'Are you a Cornell alum?'\n  '#options': yes_no\nhow_did_you_hear_about_this_program_:\n  '#type': textarea\n  '#title': 'How did you hear about this program?'\n  '#format_items': comma\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': Submit\ncaptcha:\n  '#type': captcha\n  '#captcha_type': recaptcha/reCAPTCHA"
+elements: "name:\n  '#type': textfield\n  '#title': Name\n  '#required': true\n  '#default_value': '[current-user:display-name]'\ntitle:\n  '#type': textfield\n  '#title': Title\n  '#required': true\ncompany:\n  '#type': textfield\n  '#title': Organization\n  '#required': true\n  '#format_items': comma\norganization_type:\n  '#type': select\n  '#title': 'Organization Type'\n  '#options':\n    Public: Public\n    Private: Private\n    Non-profit: Non-profit\n    Government: Government\n    Other: Other\ncell_phone:\n  '#type': tel\n  '#title': Phone\n  '#format_items': comma\nemail:\n  '#type': email\n  '#title': Email\n  '#required': true\n  '#default_value': '[current-user:mail]'\nlinkedin_profile_url:\n  '#type': textfield\n  '#title': 'LinkedIn Profile URL'\nyears_of_hr_experience:\n  '#type': number\n  '#title': 'Years of HR Experience'\n  '#format_items': comma\nmessage:\n  '#type': textarea\n  '#title': 'Please briefly describe your current role and responsibilities.'\n  '#format_items': comma\n  '#test': 'Please ignore this email.'\nhave_you_attended_a_previous_ilr_course_program_:\n  '#type': select\n  '#title': 'Have you attended a previous ILR course/program?'\n  '#options': yes_no\nare_you_a_cornell_alum_:\n  '#type': select\n  '#title': 'Are you a Cornell alum?'\n  '#options': yes_no\nhow_did_you_hear_about_this_program_:\n  '#type': textarea\n  '#title': 'How did you hear about this program?'\n  '#format_items': comma\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': Submit\ncaptcha:\n  '#type': captcha\n  '#captcha_type': recaptcha/reCAPTCHA"
 css: ''
 javascript: ''
 settings:
@@ -86,7 +86,7 @@ settings:
   confirmation_type: url_message
   confirmation_title: ''
   confirmation_message: 'Thank you. Your application has been submitted.'
-  confirmation_url: 'https://execed.ilr.cornell.edu/hr-leadership'
+  confirmation_url: 'https://execed.ilr.cornell.edu/supply-chain'
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
