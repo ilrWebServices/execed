@@ -166,8 +166,8 @@
             }
 
             a {
-                text-decoration: none;
                 color: $secondary;
+                text-decoration-color: white;
             }
         }
     }
@@ -215,7 +215,7 @@
             .block-title, .webform-submission-add-form {
                 width: 100%;
             }
-            
+
             .block-title {
                 margin-bottom: 1rem;
             }
