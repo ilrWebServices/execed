@@ -6,7 +6,7 @@ CRN.formValidation = ((CRN, $) => {
       if (field.type === 'email') return `Please enter a valid email.`;
     }
   };
-  
+
   const showError = (field, error) => {
     const id = field.id || field.name;
     if (!id) return;
@@ -18,7 +18,7 @@ CRN.formValidation = ((CRN, $) => {
       errorMessage.id = `error-for${id}`;
       field.parentNode.insertBefore(errorMessage, field.nextSibiling);
     }
-    field.setAttribute('aria-describedby', `error-for-${id}`);
+    field.setAttribute('aria-describedby', `error-for${id}`);
     errorMessage.innerHTML = `* ${error}`;
   };
 
@@ -30,7 +30,7 @@ CRN.formValidation = ((CRN, $) => {
     if (!errorMessage) return;
     errorMessage.innerHTML = '';
   };
-  
+
 
   const init = () => {
     const forms = [...document.querySelectorAll('.js-webform form')];
