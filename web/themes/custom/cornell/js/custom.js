@@ -1727,6 +1727,23 @@ OLO.util = function (OLO, $) {
 }(OLO, jQuery);
 'use strict';
 
+CRN.videoEmbedField = function (CRN) {
+  console.log('videoEmbedField');
+  var init = function init() {
+    var embedded_video = document.querySelector('.field--type-video-embed-field iframe');
+    if (embedded_video) {
+      embedded_video.removeAttribute('width');
+      embedded_video.removeAttribute('height');
+      embedded_video.removeAttribute('frameborder');
+    }
+  };
+
+  return {
+    init: init
+  };
+}(CRN);
+'use strict';
+
 CRN.router = function (CRN, $) {
 
 	var initNav = function initNav() {
@@ -1744,6 +1761,7 @@ CRN.router = function (CRN, $) {
 		CRN.tabToggle.init();
 		CRN.formValidation.init();
 		CRN.slideShow.init();
+		CRN.videoEmbedField.init();
 
 		if (document.querySelector('.box')) {
 			var rellax = new Rellax('.box');

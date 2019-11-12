@@ -15,6 +15,7 @@ CRN.router = (function(CRN, $) {
 		CRN.tabToggle.init();
 		CRN.formValidation.init();
 		CRN.slideShow.init();
+		CRN.videoEmbedField.init();
 
 		if (document.querySelector('.box')) {
 			const rellax = new Rellax('.box');
