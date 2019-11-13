@@ -12,7 +12,7 @@ id: chat_form
 title: 'Chat Form'
 description: 'The form for the chat popup'
 category: ''
-elements: "name:\n  '#type': textfield\n  '#title': Name\nemail:\n  '#type': email\n  '#title': Email\nmessage:\n  '#type': textarea\n  '#title': Message\n  '#required': true\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': Send\n"
+elements: "name:\n  '#type': textfield\n  '#title': Name\nemail:\n  '#type': email\n  '#title': Email\nmessage:\n  '#type': textarea\n  '#title': Message\n  '#required': true\ncaptcha:\n  '#type': captcha\n  '#captcha_type': recaptcha/reCAPTCHA\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': Send"
 css: ''
 javascript: ''
 settings:
