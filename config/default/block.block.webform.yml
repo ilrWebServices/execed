@@ -1,6 +1,6 @@
 uuid: 17c12bd9-281b-4467-91df-bd1ac2799022
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - webform.webform.footer_signup
@@ -21,4 +21,5 @@ settings:
   label_display: visible
   webform_id: footer_signup
   default_data: ''
+  redirect: false
 visibility: {  }

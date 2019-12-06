@@ -157,7 +157,7 @@ handlers:
     settings:
       states:
         - completed
-      to_mail: alexandriajlee@gmail.com
+      to_mail: al2269@cornell.edu
       to_options: {  }
       cc_mail: ''
       cc_options: {  }
