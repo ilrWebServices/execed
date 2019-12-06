@@ -3,7 +3,9 @@
 <!-- @ingroup sub_theming -->
 # Sass Starterkit
 
-## Tl;dr - Currently, the project requires node v9. Consider [nvm](https://github.com/creationix/nvm) so you can switch to this older version. After installing, nvm, `$ nvm use v9` and `$ cd web/themes/custom/cornell/custom`, then `$ npm install`. After which, you should be able to change the relevant scss (which somewhat absurdly lives in web/themes/custom/cornell/custom/src/css), then `$ gulp scss`. Other gulp tasks are currently throwing errors, and there wasn't a quick fix.
+## Quickstart ##
+
+Currently, the project requires node v8. Consider [nvm](https://github.com/creationix/nvm) so you can switch to this older version. After installing, nvm, `$ nvm use` and `$ cd web/themes/custom/cornell/custom`, then `$ npm install`. After which, you should be able to change the relevant scss (which somewhat absurdly lives in web/themes/custom/cornell/custom/src/css), then `$ gulp scss`. Other gulp tasks are currently throwing errors, and there wasn't a quick fix.
 
 Below are instructions on how to create a Bootstrap sub-theme using a Sass
 preprocessor.

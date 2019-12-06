@@ -13,7 +13,7 @@
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1",
     "hammerjs": "^2.0.8",
-    "jshint": "^2.9.5"
+    "jshint": "^2.10.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -30,7 +30,7 @@
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-3": "^6.24.1",
-    "browser-sync": "^2.23.5",
+    "browser-sync": "^2.26.7",
     "cssnano": "^3.10.0",
     "gulp-add-src": "^0.2.0",
     "gulp-babel": "^7.0.1",
