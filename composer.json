@@ -74,6 +74,7 @@
         "drupal/menu_svg_icons": "^1.0@RC",
         "drupal/metatag": "^1.5",
         "drupal/paragraphs": "^1.2",
+        "drupal/pathauto": "^1.6",
         "drupal/publishcontent": "^1.0",
         "drupal/recaptcha": "^2.3",
         "drupal/simple_menu_icons": "^2.1",
