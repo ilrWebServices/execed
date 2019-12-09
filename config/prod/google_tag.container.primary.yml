@@ -1,3 +1,7 @@
+status: true
+id: primary
+label: Primary
+weight: 0
 container_id: GTM-N966MM
 path_toggle: 'exclude listed'
 path_list: "/admin*\n/batch*\n/node/add*\n/node/*/edit\n/node/*/delete\n/user/*/edit*\n/user/*/cancel*"
@@ -10,10 +14,6 @@ role_list:
   content_editor: '0'
 status_toggle: 'exclude listed'
 status_list: "403\n404"
-compact_snippet: true
-include_file: true
-rebuild_snippets: true
-debug_output: false
 data_layer: dataLayer
 include_classes: false
 whitelist_classes: "google\nnonGooglePixels\nnonGoogleScripts\nnonGoogleIframes"
@@ -21,5 +21,3 @@ blacklist_classes: "customScripts\ncustomPixels"
 include_environment: false
 environment_id: ''
 environment_token: ''
-_core:
-  default_config_hash: UyNPbddlLO3s8kwBAYs5ubS74V4uBRmWxfrE9yEGeGM
