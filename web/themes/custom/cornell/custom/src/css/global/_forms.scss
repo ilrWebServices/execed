@@ -48,9 +48,6 @@
     }
 
     input[type="checkbox"] {
-        opacity: 0;
-        pointer-events: none;
-
         &:focus {
             + label {
                 &::before {
@@ -214,7 +211,7 @@
             background: $light--light;
         }
     }
-    
+
     .chosen-single {
         display: flex;
         align-items: center;
@@ -223,7 +220,7 @@
         height: 100%;
         padding: .5rem .75rem;
         background: $light--light;
-        
+
         // Sigh... Dropdown label. no classes. all is madness
         > span {
             margin-top: .125rem;
