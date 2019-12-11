@@ -1,0 +1,17 @@
+uuid: 07deb594-ebcb-4f15-92aa-1d5f5d4f871a
+langcode: en
+status: false
+dependencies: {  }
+id: prod
+label: Prod
+description: ''
+folder: ''
+module:
+  google_analytics: 0
+  google_tag: 0
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

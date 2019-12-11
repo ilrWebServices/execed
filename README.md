@@ -46,7 +46,9 @@ Then, use the included script to sync the database:
 ## Updating Drupal Core
 
 ```
-composer update drupal/core symfony/* --with-dependencies
+composer update drupal/core --with-dependencies
+drush updatedb
+drush cache:rebuild
 ```
 
 ## Content Images and Files

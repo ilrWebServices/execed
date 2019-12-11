@@ -46,7 +46,7 @@
     "require": {
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6",
-        "drupal-composer/drupal-scaffold": "^2.2",
+        "drupal/core-composer-scaffold": "^8.8.0",
         "drupal/admin_toolbar": "^1.23",
         "drupal/adminimal_admin_toolbar": "^1.5",
         "drupal/adminimal_theme": "^1.3",
@@ -59,7 +59,7 @@
         "drupal/ckeditor_responsive_plugin": "^1.0@beta",
         "drupal/config_split": "^1.4",
         "drupal/console": "^1.0.2",
-        "drupal/core": "~8.5",
+        "drupal/core": "^8.8",
         "drupal/entity_reference_revisions": "^1.4",
         "drupal/field_group": "^1.0",
         "drupal/flexslider": "^2.0@beta",
@@ -74,6 +74,7 @@
         "drupal/menu_svg_icons": "^1.0@RC",
         "drupal/metatag": "^1.5",
         "drupal/paragraphs": "^1.2",
+        "drupal/pathauto": "^1.6",
         "drupal/publishcontent": "^1.0",
         "drupal/recaptcha": "^2.3",
         "drupal/simple_menu_icons": "^2.1",
@@ -89,24 +90,19 @@
         "drupal/we_megamenu": "^1.0",
         "drupal/webform": "^5.0@RC",
         "drupal/yoast_seo": "^1.3",
-        "drush/drush": "^9.0.0",
+        "drush/drush": "^9.7.1 | ^10.0.0",
         "harvesthq/chosen": "^1.8",
         "oomphinc/composer-installers-extender": "^1.1",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",
-        "woothemes/flexslider": "^2.6"
+        "woothemes/flexslider": "^2.6",
+        "zaporylie/composer-drupal-optimizations": "^1.0"
     },
     "require-dev": {
-        "behat/mink": "~1.7",
-        "behat/mink-goutte-driver": "~1.2",
-        "drupal/devel": "^2.0",
-        "drupal/stage_file_proxy": "^1.0@alpha",
-        "jcalderonzumba/gastonjs": "~1.0.2",
-        "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
-        "mikey179/vfsstream": "~1.2",
-        "phpunit/phpunit": ">=4.8.28 <5",
-        "symfony/css-selector": "~2.8|~3.0"
+        "drupal/core-dev": "^8.8.0",
+        "drupal/devel": "^2.1",
+        "drupal/stage_file_proxy": "^1.0@RC"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -123,7 +119,6 @@
         "files": ["load.environment.php"]
     },
     "scripts": {
-        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
         "pre-install-cmd": [
             "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
         ],
@@ -139,6 +134,15 @@
         "sync-prod": "bin/sync-prod.sh"
     },
     "extra": {
+        "composer-exit-on-patch-failure": true,
+        "patchLevel": {
+            "drupal/core": "-p2"
+        },
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            }
+        },
         "installer-paths": {
             "web/core": ["type:drupal-core"],
             "web/libraries/{$name}": ["type:drupal-library"],
@@ -150,6 +154,9 @@
         "patches": {
             "drupal/video_embed_field": {
                 "Retrieve title & description for videos": "https://www.drupal.org/files/issues/2019-07-17/retrieve-title-2913925-6.patch"
+            },
+            "drupal/menu_svg_icons": {
+                "Confirm menu_name key exists": "https://www.drupal.org/files/issues/2019-12-06/confirm-menu-name-3099361-2.patch"
             }
         }
     }
