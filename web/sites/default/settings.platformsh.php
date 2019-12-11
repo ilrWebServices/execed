@@ -149,5 +149,5 @@ $settings['deployment_identifier'] = $settings['deployment_identifier'] ?? $plat
 
 if ($platformsh->onProduction()) {
   // Enable the config split for production-only modules.
-  $config['config_split.config_split.production']['status'] = TRUE;
+  $config['config_split.config_split.prod']['status'] = TRUE;
 }
