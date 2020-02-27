@@ -29,7 +29,8 @@
   }
 }
 
-.form-headline {
+.form-headline,
+.wysiwyg h2.form-headline {
   font-family: $font-body;
   font-size: 23px;
   font-weight: 700;
