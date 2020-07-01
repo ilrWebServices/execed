@@ -20,7 +20,10 @@ https://{default}/:
   type: upstream
   redirects:
     expires: -1s
-    paths: {}
+    paths:
+      '/.*':
+        to: 'https://www.ilr.cornell.edu/programs/professional-education/senior-leader-courses'
+        regexp: true
   cache:
     enabled: true
     default_ttl: 900
