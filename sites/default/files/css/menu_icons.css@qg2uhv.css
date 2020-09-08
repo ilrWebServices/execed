@@ -1,0 +1,9 @@
+
+    a.menu-icon-5,
+    ul.links li.menu-icon-5 a,
+    ul.menu li.menu-icon-5 a {
+        background-image: url(../menu_icons/image.svg);
+        padding-left:px;
+        background-repeat: no-repeat;
+        background-position: left center;
+    }
